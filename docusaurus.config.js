@@ -1,22 +1,16 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'SandboxCode',
-  tagline: 'Kỹ sư phần mềm AI - AI Software Engineer',
+  tagline: 'Kỹ sư phần mềm AI - Tự động hóa phát triển',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
   url: 'https://nguyenvanhoaithuong0507-hub.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/SandboxCode/',
 
-  // GitHub pages deployment config.
   organizationName: 'nguyenvanhoaithuong0507-hub',
   projectName: 'SandboxCode',
   deploymentBranch: 'gh-pages',
@@ -28,99 +22,61 @@ const config = {
   i18n: {
     defaultLocale: 'vi',
     locales: ['vi', 'en'],
-    localeConfigs: {
-      vi: {
-        label: 'Tiếng Việt',
-      },
-      en: {
-        label: 'English',
-      },
-    },
   },
 
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({}),
+      {
+        docs: {
+          sidebarPath: './sidebars.js',
+          editUrl: 'https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode/tree/main',
+        },
+        blog: {
+          showReadingTime: true,
+        },
+        theme: {
+          customCss: './src/css/custom.css',
+        },
+      },
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      image: 'img/docusaurus-social-card.jpg',
-      navbar: {
-        title: 'SandboxCode',
-        logo: {
-          alt: 'SandboxCode Logo',
-          src: 'img/logo.svg',
+  themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+    navbar: {
+      title: 'SandboxCode',
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
+          label: '📖 Tài liệu',
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tài liệu',
-          },
-          { to: '/blog', label: 'Blog', position: 'left' },
-          {
-            href: 'https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode',
-            label: 'GitHub',
-            position: 'right',
-          },
-          {
-            type: 'localeDropdown',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Tài liệu',
-            items: [
-              {
-                label: 'Bắt đầu',
-                to: '/docs/intro',
-              },
-              {
-                label: 'Hướng dẫn',
-                to: '/docs/guides/installation',
-              },
-            ],
-          },
-          {
-            title: 'Cộng đồng',
-            items: [
-              {
-                label: 'GitHub Discussions',
-                href: 'https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode/discussions',
-              },
-              {
-                label: 'Issues',
-                href: 'https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode/issues',
-              },
-            ],
-          },
-          {
-            title: 'Khác',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} SandboxCode. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: require('prism-react-renderer/themes/github'),
-        darkTheme: require('prism-react-renderer/themes/dracula'),
-      },
-    }),
+        {
+          href: 'https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode',
+          label: '⭐ GitHub',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Tài liệu',
+          items: [
+            { label: 'Bắt đầu', to: '/docs/intro' },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} SandboxCode.`,
+    },
+  },
 };
 
 module.exports = config;
