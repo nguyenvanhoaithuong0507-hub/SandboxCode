@@ -2,6 +2,7 @@ const sidebars = {
   tutorialSidebar: [
     'intro',
     {
+      type: 'category',
       label: 'Bắt đầu',
       items: [
         'getting-started/overview',
@@ -11,6 +12,7 @@ const sidebars = {
       ],
     },
     {
+      type: 'category',
       label: 'Hướng dẫn',
       items: [
         'guides/installation',
@@ -21,6 +23,7 @@ const sidebars = {
       ],
     },
     {
+      type: 'category',
       label: 'Tham khảo',
       items: [
         'reference/cli-reference',
