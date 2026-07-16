@@ -98,15 +98,30 @@
       </section>
 
       <section id="browse-docs" class="doc-section">
-        <h2>Browse docs</h2>
-        <p>Mobile browsers may show the section menu without the full desktop tab bar. Use these hub links to reach the same top-level docs areas from the page body.</p>
+        <h2>Tài liệu SandboxCodex</h2>
+        <p>Toàn bộ tài liệu được xếp theo cấp bậc rõ ràng: bắt đầu từ tổng quan, đi qua cài đặt, cấu hình, workflow, API rồi đến xử lý lỗi. Mỗi mục bên dưới là một nhánh tài liệu có thể mở rộng trong tương lai.</p>
         <div class="docs-hub-grid">
           <a href="#quickstart"><strong>Get started</strong><span>Overview, first steps, and setup guides.</span></a>
-          <a href="#install"><strong>Install</strong><span>Install paths, updates, containers, and local setup.</span></a>
+          <a href="#install"><strong>Install</strong><span>Cài CLI, kiểm tra phiên bản, cập nhật và chuẩn bị môi trường local.</span></a>
           <a href="#capabilities"><strong>Capabilities</strong><span>Tools, checks, templates, and automation capabilities.</span></a>
           <a href="#configuration"><strong>Configuration</strong><span>Runtime settings, tokens, and repository defaults.</span></a>
           <a href="#api-overview"><strong>Reference</strong><span>CLI commands, API primitives, and schemas.</span></a>
           <a href="#learn-more"><strong>Help</strong><span>Common fixes and troubleshooting entry points.</span></a>
+        </div>
+      </section>
+
+      <section id="install" class="doc-section doc-chapter">
+        <div class="chapter-heading">
+          <span>01</span>
+          <div>
+            <h2>Cài đặt</h2>
+            <p>Chuẩn bị môi trường trước khi chạy agent. SandboxCodex hỗ trợ Node.js, workspace Git và token GitHub để tạo pull request.</p>
+          </div>
+        </div>
+        <div class="chapter-grid">
+          <article><strong>Yêu cầu</strong><span>Node.js 16.20+, Git, npm và quyền truy cập repository.</span></article>
+          <article><strong>Cài CLI</strong><span>Chạy <code>npm install -g sandboxcodex</code> để dùng lệnh ở mọi dự án.</span></article>
+          <article><strong>Xác thực</strong><span>Thiết lập <code>GITHUB_TOKEN</code> trong môi trường hoặc file secret của CI.</span></article>
         </div>
       </section>
 
@@ -153,6 +168,22 @@ cd my-project</code></pre></div>
         </ol>
       </section>
 
+      <section id="workflow" class="doc-section doc-chapter">
+        <div class="chapter-heading">
+          <span>03</span>
+          <div>
+            <h2>Workflow chuẩn</h2>
+            <p>Mỗi lần chạy agent đi qua các bước ổn định để team dễ kiểm soát chất lượng.</p>
+          </div>
+        </div>
+        <div class="timeline-list">
+          <div><strong>Plan</strong><span>Agent đọc yêu cầu, kiểm tra cấu trúc repo và lập kế hoạch thay đổi.</span></div>
+          <div><strong>Patch</strong><span>Agent chỉnh code trong sandbox, giữ diff nhỏ và dễ review.</span></div>
+          <div><strong>Verify</strong><span>Chạy lint/test/build, ghi lại kết quả và giới hạn môi trường.</span></div>
+          <div><strong>PR</strong><span>Tạo tiêu đề, mô tả, summary và testing notes cho pull request.</span></div>
+        </div>
+      </section>
+
       <section id="configuration" class="doc-section">
         <h2>Configuration (optional)</h2>
         <p>Config lives in <code>sandbox.config.js</code>. If you do nothing, SandboxCodex uses sensible defaults for local development, tests, and PR summaries.</p>
@@ -185,7 +216,9 @@ cd my-project</code></pre></div>
         <li><a href="#browse-docs">Browse docs</a></li>
         <li><a href="#how-it-works">How it works</a></li>
         <li><a href="#capabilities">Key capabilities</a></li>
+        <li><a href="#install">Install</a></li>
         <li><a href="#quickstart">Quick start</a></li>
+        <li><a href="#workflow">Workflow</a></li>
         <li><a href="#configuration">Configuration</a></li>
         <li><a href="#api-overview">API Reference</a></li>
       </ul>
