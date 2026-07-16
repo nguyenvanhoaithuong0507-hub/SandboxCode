@@ -1,0 +1,11 @@
+### Select Topic Area
+
+Product Feedback
+
+### Body
+
+My README doesn't render the same way when viewed in Packages as it does in its Repository.
+
+It doesn't handle [footnotes](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#footnotes) at all, and [relative links](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#relative-links) don't seem to work. (Or at least it didn't resolve to that document's location in the Repository view. That document was not included in the `package.json` `files` so maybe that's why it doesn't link… but given I can't navigate to another file that is packaged, like LICENSE, I doubt it.)
+
+I've just confirmed that the main npmjs.com registry handles both footnotes and relative links as expected.
