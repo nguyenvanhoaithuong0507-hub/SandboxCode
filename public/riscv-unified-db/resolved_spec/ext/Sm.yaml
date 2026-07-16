@@ -1,0 +1,109 @@
+# Bản quyền (c) thuộc về Qualcomm Technologies, Inc. và/hoặc các công ty con của nó.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# yaml-language-server: $schema=../../../schemas/ext_schema.json
+
+$schema: "ext_schema.json#"
+loại: phần mở rộng
+Tên: Sm
+loại: đặc quyền
+long_name: Chế độ máy
+các phiên bản:
+- phiên bản: "1.11.0"
+  Trạng thái: đã phê chuẩn
+  ngày phê chuẩn: 2019-12
+  thay đổi:
+  - Đã chuyển trạng thái Thông số kỹ thuật máy sang *Đã phê duyệt*.
+  - Cải thiện phần mô tả và bình luận.
+  - Chỉ định các nguồn ngắt nào được dành riêng cho mục đích sử dụng tiêu chuẩn.
+  - Đã phân bổ một số nguyên nhân ngoại lệ đồng bộ để sử dụng tùy chỉnh.
+  - Xác định thứ tự ưu tiên của các ngoại lệ đồng bộ.
+  - Bổ sung quy định rằng các lệnh xRET có thể, nhưng không bắt buộc,
+    Xóa các đặt chỗ LR nếu có phần mở rộng A.
+  - Đã đổi tên trường *WLRL* từ `mstatus`.MPP thành *WARL*.
+  - Đã chuyển các trường `__x__ip` không sử dụng thành *WPRI* thay vì *WIRI*.
+  - Đã chuyển các trường `misa` không sử dụng thành *WARL* thay vì *WIRI*.
+  - Đã sửa lỗi biên tập mô tả sai cơ chế hoạt động của
+    `mstatus.__x__IE` được ghi khi xảy ra ngoại lệ.
+  - Mô tả sơ đồ mô phỏng các AMO bị lệch.
+  - Xác định hành vi của các thanh ghi `misa` và `__x__epc` trong hệ thống.
+    với IALIGN biến đổi.
+  - Xác định hành vi ghi các giá trị mâu thuẫn vào biến `misa`.
+    đăng ký.
+  - Nội dung cụ thể của CSR trong quá trình sửa đổi XLEN.
+  - Đã tách chương PLIC thành một tài liệu riêng.
+- phiên bản: "1.12.0"
+  Trạng thái: đã phê chuẩn
+  ngày phê chuẩn: 2021-12
+  thay đổi:
+  - Đã thay đổi MRET để xóa `mstatus`.MPRV khi thoát khỏi chế độ M.
+  - Các vùng I/O được nới lỏng đã được chỉ định để tuân theo RVWMO. Trước đó
+    Thông số kỹ thuật ngụ ý rằng các quy tắc PPO khác với hàng rào và việc mua/bán.
+    Các chú thích không áp dụng.
+  - Giới hạn kích thước và hình dạng của tập hợp đặt chỗ LR/SC khi sử dụng phương pháp dựa trên trang.
+    bộ nhớ ảo.
+  - Các thay đổi PMP yêu cầu tệp SFENCE.VMA trên bất kỳ thiết bị hart nào triển khai cơ chế dựa trên trang.
+    bộ nhớ ảo, ngay cả khi VM hiện không được bật.
+  - Đã xóa phần mở rộng N.
+  - Đã định nghĩa CSR bắt buộc chỉ dành cho RV32 là `mstatush`, chứa hầu hết các thông tin cần thiết.
+    Các trường tương tự như 32 bit trên của `mstatus` của RV64.
+  - Đã định nghĩa CSR bắt buộc `mconfigptr`, nếu khác 0 thì chứa
+    Địa chỉ của cấu trúc dữ liệu cấu hình.
+  - Đã định nghĩa các CSR `mseccfg` và `mseccfgh`, dùng để kiểm soát tính bảo mật của máy.
+    cấu hình.
+  - Định nghĩa CSR `menvcfg` (và `menvcfgh` chỉ dành cho RV32), điều khiển nhiều chức năng khác nhau.
+    đặc điểm của môi trường thực thi.
+  - Phần được chỉ định của mã lệnh chính SYSTEM để sử dụng tùy chỉnh.
+  - Cho phép ủy quyền vô điều kiện cho những người có quyền hạn thấp hơn can thiệp.
+  - Thêm tùy chọn hỗ trợ big-endian và bi-endian.
+  - Ưu tiên xử lý các ngoại lệ không khớp địa chỉ khi tải/lưu trữ/AMO.
+    được xác định bởi cách triển khai liên quan đến lỗi trang tải/lưu trữ/AMO và
+    ngoại lệ lỗi truy cập.
+  - Các ngoại lệ điểm dừng phần mềm được phép ghi giá trị 0 hoặc `pc`.
+    thành `__x__tval`.
+  - Đã chỉ định các ràng buộc được nới lỏng cho việc đọc ngầm các vùng không có tính chất bất biến.
+- phiên bản: "1.13.0"
+  trạng thái: đóng băng
+  ngày phê chuẩn: 2023-12
+  thay đổi:
+  - Đã định nghĩa lại `misa`.MXL thành chỉ đọc, biến MXLEN thành hằng số.
+  - Đã định nghĩa trường `misa`.B để phản ánh rằng phần mở rộng B đã được
+    đã được thực hiện.
+  - Đã định nghĩa trường `misa`.V để phản ánh rằng phần mở rộng V đã được
+    đã được thực hiện.
+  - Đã định nghĩa CSR `medelegh` chỉ dành cho RV32.
+  - Đã định nghĩa hạt nguyên tử lệch hướng PMA, thay thế cho Zam được đề xuất.
+    sự mở rộng.
+  - Định nghĩa các mã lỗi phần cứng và mã ngoại lệ kiểm tra phần mềm.
+  - Các yêu cầu đồng bộ hóa được chỉ định khi thay đổi các trường PBMTE trong
+    `menvcfg` và `henvcfg`.
+  - Đã chuyển các ngắt tràn số sang chế độ VS thông qua phần mở rộng Shlcofideleg.
+  - Hành vi linh hoạt của một số HINT khi MXLEN > XLEN.
+  - Chuyển đổi tài liệu từ LaTeX sang AsciiDoc.
+  - Bao gồm tất cả các gia hạn đã được phê chuẩn đến tháng 3 năm 2024.
+  - Làm rõ rằng các ngắt "sử dụng cho nền tảng hoặc tùy chỉnh" thực chất là
+    "Ngắt sử dụng nền tảng", trong đó nền tảng có thể chọn thực hiện một số thao tác.
+    phong tục.
+  - Làm rõ ngữ nghĩa của việc truy cập rõ ràng vào CSR rộng hơn XLEN bit.
+  - Làm rõ rằng MXLEN&8805;SXLEN.
+  - Làm rõ rằng WFI không phải là lệnh HINT.
+  - Làm rõ rằng, đối với một nguyên nhân ngoại lệ nhất định, `__x__tval` đôi khi có thể là
+    Đôi khi được đặt thành một giá trị khác không, nhưng đôi khi lại không.
+  - Làm rõ hành vi xử lý ngoại lệ của các yêu cầu CSR chưa được triển khai hoặc không thể truy cập.
+  - Thay thế khái niệm vùng nhớ trống bằng vùng nhớ không thể truy cập hoặc
+    Vùng I/O.
+  - Làm rõ rằng sự xuất hiện của các ngắt hẹn giờ và tràn số đếm trong
+    Các thanh ghi đang chờ xử lý ngắt không hoạt động ngay lập tức.
+  - Làm rõ rằng MXR chỉ ảnh hưởng đến các truy cập bộ nhớ tường minh.
+Mô tả: |
+  Chương này mô tả các thao tác ở cấp độ máy có sẵn trong chế độ máy (M-mode), tức là
+  Chế độ M là chế độ đặc quyền cao nhất trong bộ vi xử lý RISC-V. Chế độ M được sử dụng để truy cập cấp thấp vào phần cứng.
+  Nền tảng này là chế độ đầu tiên được kích hoạt khi khởi động lại. Chế độ M cũng có thể được sử dụng để triển khai các tính năng mà
+  Việc triển khai trực tiếp trên phần cứng quá khó khăn hoặc tốn kém. Kiến trúc tập lệnh cấp máy RISC-V
+  Chứa một lõi chung được mở rộng tùy thuộc vào các cấp độ đặc quyền khác được hỗ trợ và
+  Các chi tiết khác về việc triển khai phần cứng.
+  Chương này mô tả kiến trúc cấp máy RISC-V, trong đó...
+  Chứa một lõi chung được sử dụng với nhiều cấp độ giám sát khác nhau.
+  Các chương trình dịch thuật và bảo vệ địa chỉ.
+$source:
+  /home/runner/work/riscv-unified-db/riscv-unified-db/gen/spec/_/ext/Sm.yaml
