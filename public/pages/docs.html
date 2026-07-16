@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../pages/pages.css">
 </head>
-<body>
+<body class="docs-page">
   <header>
     <div class="status-strip">
       <span>SandboxCodex v0.2.0</span>
@@ -19,7 +19,7 @@
       </div>
       <nav class="desktop-nav">
         <a href="../index.html">Home</a>
-        <a href="./docs.html">Docs</a>
+        <a href="./docs.html" class="active">Docs</a>
         <a href="./templates.html">Templates</a>
         <a href="./integrations.html">Integrations</a>
         <a href="./community.html">Community</a>
@@ -31,82 +31,163 @@
     </div>
   </header>
 
-  <div class="docs-container">
-    <aside class="docs-sidebar">
-      <div class="docs-search">
-        <input type="text" placeholder="Search docs..." class="search-input">
-      </div>
+  <section class="openclaw-docbar" aria-label="Docs header">
+    <button class="doc-icon-btn" aria-label="Open navigation">☰</button>
+    <a class="doc-mobile-brand" href="../index.html" aria-label="SandboxCodex home">
+      <span class="doc-mascot" aria-hidden="true"></span>
+      <strong>SandboxCodex</strong>
+    </a>
+    <div class="doc-actions" aria-label="Docs actions">
+      <button class="doc-pill-btn" aria-label="Language">🇺🇸</button>
+      <button class="doc-icon-btn" aria-label="Toggle theme">◐</button>
+    </div>
+  </section>
+
+  <section class="openclaw-search-wrap">
+    <label class="openclaw-search">
+      <span aria-hidden="true">⌕</span>
+      <input type="text" placeholder="Tìm kiếm...">
+      <kbd>⌘ K</kbd>
+    </label>
+  </section>
+
+  <div class="docs-container openclaw-layout">
+    <aside class="docs-sidebar" aria-label="Browse docs">
+      <h2>Browse docs</h2>
       <nav class="docs-nav">
-        <h3>Getting Started</h3>
+        <h3>Get started</h3>
         <ul>
-          <li><a href="#intro">Introduction</a></li>
-          <li><a href="#install">Installation</a></li>
-          <li><a href="#quickstart">Quick Start</a></li>
+          <li><a href="#overview" class="is-active">Overview</a></li>
+          <li><a href="#quickstart">First steps</a></li>
+          <li><a href="#install">Install</a></li>
         </ul>
-        <h3>Configuration</h3>
+        <h3>Guides</h3>
         <ul>
-          <li><a href="#config">Setup</a></li>
-          <li><a href="#env">Environment Variables</a></li>
-          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#configuration">Configuration</a></li>
         </ul>
-        <h3>API Reference</h3>
+        <h3>Reference</h3>
         <ul>
-          <li><a href="#api-overview">Overview</a></li>
-          <li><a href="#endpoints">Endpoints</a></li>
-          <li><a href="#errors">Error Handling</a></li>
-        </ul>
-        <h3>Examples</h3>
-        <ul>
-          <li><a href="#examples">Code Examples</a></li>
-          <li><a href="#recipes">Recipes</a></li>
+          <li><a href="#api-overview">API Reference</a></li>
+          <li><a href="#learn-more">Troubleshooting</a></li>
         </ul>
       </nav>
     </aside>
 
-    <main class="docs-content">
-      <section id="intro" class="doc-section">
-        <h2>Introduction</h2>
-        <p>SandboxCodex is an AI-powered platform for automated code review, testing, and PR generation.</p>
+    <main class="docs-content openclaw-content">
+      <div class="doc-breadcrumb-row">
+        <nav class="doc-breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Bắt đầu</a>
+          <span>/</span>
+          <a href="./docs.html">SandboxCodex</a>
+        </nav>
+        <button class="copy-page-btn"><span aria-hidden="true">⧉</span> Sao chép trang <span aria-hidden="true">⌄</span></button>
+      </div>
+
+      <section id="overview" class="doc-section openclaw-overview">
+        <div class="doc-label">Tổng quan</div>
+        <h1>SandboxCodex</h1>
+        <div class="brand-lockup" aria-label="SandboxCodex">
+          <span class="doc-mascot doc-mascot-xl" aria-hidden="true"></span>
+          <span>SandboxCodex</span>
+        </div>
+        <blockquote>"Ship code safely from an isolated sandbox." — your AI coding teammate</blockquote>
+        <p class="lead-copy">Cổng tự động hóa dành cho lập trình viên: chạy tác nhân AI, kiểm thử, review code và chuẩn bị pull request ngay trong một workspace an toàn.</p>
+        <p>Gửi yêu cầu, nhận bản vá, kiểm tra kết quả và tạo PR mà không phải rời khỏi luồng làm việc. SandboxCodex gom CLI, dashboard, templates và tích hợp GitHub vào một trải nghiệm tài liệu dễ đọc trên cả desktop lẫn mobile.</p>
       </section>
 
-      <section id="install" class="doc-section">
-        <h2>Installation</h2>
-        <p>Get started by installing SandboxCodex:</p>
-        <div class="code-block">
-          npm install sandboxcodex
+      <section id="browse-docs" class="doc-section">
+        <h2>Browse docs</h2>
+        <p>Mobile browsers may show the section menu without the full desktop tab bar. Use these hub links to reach the same top-level docs areas from the page body.</p>
+        <div class="docs-hub-grid">
+          <a href="#quickstart"><strong>Get started</strong><span>Overview, first steps, and setup guides.</span></a>
+          <a href="#install"><strong>Install</strong><span>Install paths, updates, containers, and local setup.</span></a>
+          <a href="#capabilities"><strong>Capabilities</strong><span>Tools, checks, templates, and automation capabilities.</span></a>
+          <a href="#configuration"><strong>Configuration</strong><span>Runtime settings, tokens, and repository defaults.</span></a>
+          <a href="#api-overview"><strong>Reference</strong><span>CLI commands, API primitives, and schemas.</span></a>
+          <a href="#learn-more"><strong>Help</strong><span>Common fixes and troubleshooting entry points.</span></a>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="doc-section">
+        <h2>How it works</h2>
+        <p>The sandbox is the single source of truth for runs, logs, generated patches, and pull request metadata.</p>
+        <div class="flow-card">
+          <span>Repository</span>
+          <i>→</i>
+          <span>Sandbox</span>
+          <i>→</i>
+          <span>AI Agent</span>
+          <i>→</i>
+          <span>Pull Request</span>
+        </div>
+      </section>
+
+      <section id="capabilities" class="doc-section">
+        <h2>Key capabilities</h2>
+        <div class="docs-hub-grid compact">
+          <a href="#quickstart"><strong>Automated review</strong><span>Find risky changes before they leave the workspace.</span></a>
+          <a href="#install"><strong>Test orchestration</strong><span>Run lint, unit, build, and custom checks consistently.</span></a>
+          <a href="#configuration"><strong>Scoped secrets</strong><span>Keep tokens and environment variables controlled.</span></a>
+          <a href="#api-overview"><strong>PR generation</strong><span>Prepare titles, bodies, summaries, and test notes.</span></a>
         </div>
       </section>
 
       <section id="quickstart" class="doc-section">
-        <h2>Quick Start</h2>
-        <p>Create your first project in 3 steps:</p>
-        <div class="code-block">
-          sandboxcodex init my-project
-          cd my-project
-          npm start
+        <h2>Quick start</h2>
+        <ol class="quickstart-list">
+          <li>
+            <h3>Install SandboxCodex</h3>
+            <div class="code-window"><div class="code-title"><strong>bash</strong><button>Copy code</button></div><pre><code>npm install -g sandboxcodex</code></pre></div>
+          </li>
+          <li>
+            <h3>Create a workspace</h3>
+            <div class="code-window"><div class="code-title"><strong>bash</strong><button>Copy code</button></div><pre><code>sandboxcodex init my-project
+cd my-project</code></pre></div>
+          </li>
+          <li>
+            <h3>Open the dashboard</h3>
+            <div class="code-window"><div class="code-title"><strong>bash</strong><button>Copy code</button></div><pre><code>sandboxcodex dashboard</code></pre></div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="configuration" class="doc-section">
+        <h2>Configuration (optional)</h2>
+        <p>Config lives in <code>sandbox.config.js</code>. If you do nothing, SandboxCodex uses sensible defaults for local development, tests, and PR summaries.</p>
+        <div class="code-window"><div class="code-title"><strong>js</strong><button>Copy code</button></div><pre><code>module.exports = {
+  projectName: 'my-project',
+  sandbox: { runtime: 'nodejs', checks: ['lint', 'test', 'build'] },
+  github: { token: process.env.GITHUB_TOKEN }
+};</code></pre></div>
+      </section>
+
+      <section id="api-overview" class="doc-section">
+        <h2>API Reference</h2>
+        <div class="api-table">
+          <div><strong>POST</strong><span>/v1/runs</span><em>Create an agent run</em></div>
+          <div><strong>GET</strong><span>/v1/runs/:id</span><em>Inspect status and logs</em></div>
+          <div><strong>POST</strong><span>/v1/pull-requests</span><em>Prepare PR metadata</em></div>
         </div>
       </section>
 
-      <section id="config" class="doc-section">
-        <h2>Configuration</h2>
-        <p>Configure SandboxCodex via <code>sandbox.config.js</code>:</p>
-        <div class="code-block">
-module.exports = {
-  projectName: 'my-project',
-  sandbox: { runtime: 'nodejs' },
-  github: { token: process.env.GITHUB_TOKEN }
-};
-        </div>
+      <section id="learn-more" class="doc-section docs-feedback">
+        <h2>Learn more</h2>
+        <p>Need the full install and development setup? Continue with templates, integrations, and community resources.</p>
+        <div><a href="./templates.html">Templates</a><a href="./integrations.html">Integrations</a><a href="./community.html">Community</a></div>
       </section>
     </main>
 
-    <aside class="docs-toc">
+    <aside class="docs-toc" aria-label="On this page">
       <h3>On this page</h3>
       <ul>
-        <li><a href="#intro">Introduction</a></li>
-        <li><a href="#install">Installation</a></li>
-        <li><a href="#quickstart">Quick Start</a></li>
-        <li><a href="#config">Configuration</a></li>
+        <li><a href="#browse-docs">Browse docs</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#capabilities">Key capabilities</a></li>
+        <li><a href="#quickstart">Quick start</a></li>
+        <li><a href="#configuration">Configuration</a></li>
+        <li><a href="#api-overview">API Reference</a></li>
       </ul>
     </aside>
   </div>
