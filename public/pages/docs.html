@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../pages/pages.css">
 </head>
-<body>
+<body class="docs-page">
   <header>
     <div class="status-strip">
       <span>SandboxCodex v0.2.0</span>
@@ -19,7 +19,7 @@
       </div>
       <nav class="desktop-nav">
         <a href="../index.html">Home</a>
-        <a href="./docs.html">Docs</a>
+        <a href="./docs.html" class="active">Docs</a>
         <a href="./templates.html">Templates</a>
         <a href="./integrations.html">Integrations</a>
         <a href="./community.html">Community</a>
@@ -31,15 +31,34 @@
     </div>
   </header>
 
+  <section class="docs-hero">
+    <div class="docs-hero-grid"></div>
+    <div class="docs-hero-inner">
+      <div class="docs-kicker">SANDBOXCODEX DOCUMENTATION</div>
+      <h1>Xây dựng, chạy thử và tự động hóa PR với trải nghiệm docs chuẩn production.</h1>
+      <p>Trang tài liệu được thiết kế lại theo phong cách hiện đại: sidebar rõ ràng, khối mã nổi bật, thẻ hướng dẫn nhanh và bố cục đọc tập trung giống các documentation site chuyên nghiệp.</p>
+      <div class="docs-hero-actions">
+        <a href="#quickstart" class="btn btn-primary"><span class="btn-prompt">$</span>Start quickstart</a>
+        <a href="#api-overview" class="btn btn-outline">View API reference</a>
+      </div>
+      <div class="docs-hero-stats" aria-label="Documentation highlights">
+        <div><strong>5 phút</strong><span>để chạy dự án đầu tiên</span></div>
+        <div><strong>12+</strong><span>workflow mẫu</span></div>
+        <div><strong>CLI + API</strong><span>một chuẩn cấu hình</span></div>
+      </div>
+    </div>
+  </section>
+
   <div class="docs-container">
-    <aside class="docs-sidebar">
+    <aside class="docs-sidebar" aria-label="Documentation navigation">
       <div class="docs-search">
+        <span>⌘K</span>
         <input type="text" placeholder="Search docs..." class="search-input">
       </div>
       <nav class="docs-nav">
         <h3>Getting Started</h3>
         <ul>
-          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#intro" class="is-active">Introduction</a></li>
           <li><a href="#install">Installation</a></li>
           <li><a href="#quickstart">Quick Start</a></li>
         </ul>
@@ -64,50 +83,103 @@
     </aside>
 
     <main class="docs-content">
-      <section id="intro" class="doc-section">
-        <h2>Introduction</h2>
-        <p>SandboxCodex is an AI-powered platform for automated code review, testing, and PR generation.</p>
+      <section id="intro" class="doc-section doc-intro-card">
+        <div class="doc-label">Overview</div>
+        <h2>Documentation that feels fast, technical, and premium.</h2>
+        <p>SandboxCodex is an AI-powered platform for automated code review, testing, and PR generation. Use this guide to install the CLI, connect a repository, configure agents, and ship reliable changes from an isolated sandbox.</p>
+        <div class="doc-feature-grid">
+          <article>
+            <span>01</span>
+            <h3>Agent workflows</h3>
+            <p>Run code review, tests, changelog generation, and PR preparation from one command surface.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Safe sandboxing</h3>
+            <p>Keep secrets, environment variables, and repository changes scoped to the workspace.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Team ready</h3>
+            <p>Standardize setup through config files and reusable templates for every project.</p>
+          </article>
+        </div>
       </section>
 
       <section id="install" class="doc-section">
+        <div class="doc-label">Install</div>
         <h2>Installation</h2>
-        <p>Get started by installing SandboxCodex:</p>
-        <div class="code-block">
-          npm install sandboxcodex
+        <p>Install the CLI globally or add it to an existing project so every contributor can run the same commands.</p>
+        <div class="code-window">
+          <div class="code-title"><span></span><span></span><span></span><strong>terminal</strong></div>
+          <pre><code>npm install sandboxcodex
+npx sandboxcodex --version</code></pre>
         </div>
       </section>
 
       <section id="quickstart" class="doc-section">
-        <h2>Quick Start</h2>
-        <p>Create your first project in 3 steps:</p>
-        <div class="code-block">
-          sandboxcodex init my-project
-          cd my-project
-          npm start
+        <div class="doc-label">Quickstart</div>
+        <h2>Launch your first workspace</h2>
+        <p>Create a project, enter the directory, and start the development server. The initializer creates a baseline configuration, sample automation, and a local dashboard.</p>
+        <div class="step-list">
+          <div><span>1</span><p>Create a sandbox workspace with a production-ready folder structure.</p></div>
+          <div><span>2</span><p>Connect GitHub and choose the workflows your repository should run.</p></div>
+          <div><span>3</span><p>Start the dashboard and monitor generated checks in real time.</p></div>
+        </div>
+        <div class="code-window">
+          <div class="code-title"><span></span><span></span><span></span><strong>terminal</strong></div>
+          <pre><code>sandboxcodex init my-project
+cd my-project
+npm start</code></pre>
         </div>
       </section>
 
       <section id="config" class="doc-section">
-        <h2>Configuration</h2>
-        <p>Configure SandboxCodex via <code>sandbox.config.js</code>:</p>
-        <div class="code-block">
-module.exports = {
+        <div class="doc-label">Configuration</div>
+        <h2>Configure your automation</h2>
+        <p>Use <code>sandbox.config.js</code> to define runtime, repository access, and default agent behavior.</p>
+        <div class="code-window">
+          <div class="code-title"><span></span><span></span><span></span><strong>sandbox.config.js</strong></div>
+          <pre><code>module.exports = {
   projectName: 'my-project',
-  sandbox: { runtime: 'nodejs' },
-  github: { token: process.env.GITHUB_TOKEN }
-};
+  sandbox: {
+    runtime: 'nodejs',
+    checks: ['lint', 'test', 'build']
+  },
+  github: {
+    token: process.env.GITHUB_TOKEN,
+    defaultBranch: 'main'
+  }
+};</code></pre>
+        </div>
+      </section>
+
+      <section id="api-overview" class="doc-section">
+        <div class="doc-label">API Reference</div>
+        <h2>Composable API primitives</h2>
+        <p>Pair the CLI with API endpoints for custom dashboards, internal developer portals, or CI/CD integrations.</p>
+        <div class="api-table">
+          <div><strong>POST</strong><span>/v1/runs</span><em>Create an agent run</em></div>
+          <div><strong>GET</strong><span>/v1/runs/:id</span><em>Inspect status and logs</em></div>
+          <div><strong>POST</strong><span>/v1/pull-requests</span><em>Prepare PR metadata</em></div>
         </div>
       </section>
     </main>
 
-    <aside class="docs-toc">
+    <aside class="docs-toc" aria-label="On this page">
       <h3>On this page</h3>
       <ul>
         <li><a href="#intro">Introduction</a></li>
         <li><a href="#install">Installation</a></li>
         <li><a href="#quickstart">Quick Start</a></li>
         <li><a href="#config">Configuration</a></li>
+        <li><a href="#api-overview">API Reference</a></li>
       </ul>
+      <div class="toc-card">
+        <strong>Need help?</strong>
+        <p>Join the community or open a support ticket for implementation guidance.</p>
+        <a href="./community.html">Go to community →</a>
+      </div>
     </aside>
   </div>
 
