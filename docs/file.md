@@ -1,78 +1,83 @@
 ---
-title: Adding features to a devcontainer.json file
-shortTitle: Adding features
-intro: With features, you can quickly add tools, runtimes, or libraries to your dev container configuration.
-allowTitleToDifferFromFilename: true
-versions:
-  fpt: '*'
-  ghec: '*'
-redirect_from:
-  - /codespaces/setting-up-your-project-for-codespaces/adding-features-to-a-devcontainer-file
-contentType: how-tos
-category:
-  - Set up dev containers for a project
+sidebar_position: 3
+title: File Management Guide
+description: Learn how to work with files in SandboxCode projects
 ---
 
-{% data reusables.codespaces.about-features %} Use the tabs in this article to display instructions for each of these ways of adding features.
+# File Management Guide
 
-## Adding features to a `devcontainer.json` file
+This guide explains how to manage and organize files in your SandboxCode documentation.
 
-{% webui %}
+## File Organization
 
-1. Navigate to your repository on {% data variables.product.github %}, find your `devcontainer.json` file, and click {% octicon "pencil" aria-label="Edit this file" %} to edit the file.
+The project uses a standard structure for documentation and assets:
 
-   If you don't already have a `devcontainer.json` file, you can create one now. For more information, see [AUTOTITLE](/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers#creating-a-custom-dev-container-configuration).
-1. To the right of the file editor, in the **Marketplace** tab, browse or search for the feature you want to add, then click the name of the feature.
+```
+docs/
+├── intro.md           # Introduction
+├── getting-started.md # Getting Started
+└── file.md            # File Management (this file)
 
-   ![Screenshot of the "Marketplace" tab with "Terra" in the search box and the Terraform feature listed in the search results.](/assets/images/help/codespaces/feature-marketplace.png)
+public/
+├── main.js            # Frontend scripts
+└── style.css          # Stylesheets
 
-1. Under "Installation," click the code snippet to copy it to your clipboard, then paste the snippet into the `features` object in your `devcontainer.json` file.
+src/
+├── pages/
+│   ├── index.js       # Homepage
+│   └── dashboard.js   # Dashboard
+└── css/
+    └── custom.css     # Custom styles
+```
 
-   ![Screenshot of the "Marketplace" tab showing the installation code snippet for Terraform.](/assets/images/help/codespaces/feature-installation-code.png)
+## Adding Documentation
 
-   ```jsonc
-   "features": {
-        // ...
-        "ghcr.io/devcontainers/features/terraform:1": {},
-        // ...
-        }
-    ```
+### Create a New Markdown File
 
-1. By default, the latest version of the feature will be used. To choose a different version, or configure other options for the feature, expand the properties listed under "Options" to view the available values, then add the options by manually editing the object in your `devcontainer.json` file.
+1. Add a new `.md` file in the `docs/` directory
+2. Include frontmatter at the top:
 
-   ![Screenshot of the "Options" section of the "Marketplace" tab, with the "version" and "tflint" properties expanded.](/assets/images/help/codespaces/feature-options.png)
+```md
+---
+sidebar_position: 2
+title: Your Page Title
+description: Page description for SEO
+---
 
-   ```jsonc
-   "features": {
-        // ...
-        "ghcr.io/devcontainers/features/terraform:1": {
-            "version": "1.1",
-            "tflint": "latest"
-        },
-        // ...
-        }
-    ```
+# Your Page Title
 
-1. Commit the changes to your `devcontainer.json` file.
+Content goes here...
+```
 
-The configuration changes will take effect in new codespaces created from the repository. To make the changes take effect in existing codespaces, you will need to pull the updates to the `devcontainer.json` file into your codespace, then rebuild the container for the codespace. For more information, see [AUTOTITLE](/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers#applying-configuration-changes-to-a-codespace).
+### Sidebar Configuration
 
-{% endwebui %}
+Update `sidebars.js` to add your page to the navigation:
 
-{% vscode %}
+```js
+module.exports = {
+  tutorialSidebar: [
+    'intro',
+    'getting-started',
+    'file', // Your new page
+  ],
+};
+```
 
-> [!NOTE]
-> To add features in {% data variables.product.prodname_vscode_shortname %} while you are working locally, and not connected to a codespace, you must have the "Dev Containers" extension installed and enabled. For more information about this extension, see the [{% data variables.product.prodname_vs_marketplace_shortname %}](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
+## Markdown Features
 
-{% data reusables.codespaces.command-palette %}
-1. Start typing "add dev" then click **Codespaces: Add Dev Container Configuration Files**.
+Docusaurus supports:
 
-   ![Screenshot of the Command Palette, with "add dev" entered and "Codespaces: Add Dev Container Configuration Files" listed.](/assets/images/help/codespaces/add-prebuilt-container-command.png)
+- **Headings**: Use `#`, `##`, `###`, etc.
+- **Lists**: Both ordered and unordered
+- **Code blocks**: Wrap in triple backticks with language
+- **Links**: `[text](url)` or `[internal link](/docs/intro)`
+- **Images**: `![alt text](image.jpg)`
+- **Tables**: Standard markdown tables
 
-1. Click **Modify your active configuration**.
-1. Update your feature selections, then click **OK**.
-1. If you're working in a codespace, a prompt will appear in the lower-right corner. To rebuild the container and apply the changes to the codespace you're working in, click **Rebuild Now**.
+## Best Practices
 
-   ![Screenshot of the message: "We've noticed a change to the dev container configuration." Below this is the "Rebuild Now" button.](/assets/images/help/codespaces/rebuild-prompt.png)
-
-{% endvscode %}
+1. **Keep files organized** — Group related documents in subdirectories
+2. **Use clear titles** — Descriptive page titles help with navigation
+3. **Link internally** — Cross-link related documentation pages
+4. **Add descriptions** — SEO descriptions improve search visibility
+5. **Review markdown** — Ensure links work before deploying

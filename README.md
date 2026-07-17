@@ -1,19 +1,19 @@
-# SandboxCodex — AI Software Engineer
+# SandboxCode — Documentation & Knowledge Base
 
-> **Automated Code Review, Testing & Pull Requests in a Sandbox Environment**
+> **Docusaurus 3 Documentation Site**
 
-An intelligent AI-powered platform that can review repositories, write code, execute tests, and automatically generate pull requests—all within an isolated sandbox.
+A comprehensive documentation and knowledge base site built with Docusaurus 3, featuring multilingual support (Vietnamese & English) and automated deployment to GitHub Pages.
 
 ---
 
 ## 🎯 Features
 
-- **Smart Code Review** — AI analyzes and evaluates code quality
-- **Automated Bug Fixes** — Identify and patch issues automatically
-- **Sandbox Runtime** — Execute code safely in isolated environments
-- **Git Integration** — Auto-commit, push, and create PRs
-- **CI/CD Pipeline** — Test across Node.js 18.x, 20.x, 22.x
-- **Secure & Isolated** — No production system access
+- **Docusaurus 3** — Modern documentation framework with React & MDX
+- **Multilingual Support** — Vietnamese (vi) and English (en) translations
+- **Dark Mode** — Beautiful dark theme with light mode option
+- **Fast & SEO-Optimized** — Static site generation with excellent SEO
+- **GitHub Pages Deploy** — Automated CI/CD pipeline for deployment
+- **Responsive Design** — Mobile-friendly documentation experience
 
 ---
 
@@ -21,8 +21,8 @@ An intelligent AI-powered platform that can review repositories, write code, exe
 
 ### Prerequisites
 - Node.js 18.x or higher
-- npm or pnpm
-- GitHub account (for OAuth integration)
+- npm
+- Git
 
 ### Installation
 
@@ -34,14 +34,14 @@ cd SandboxCode
 # Install dependencies
 npm install
 
-# Start development server (if applicable)
-npm run dev
-
-# Run tests
-npm test
+# Start local development server
+npm start
 
 # Build for production
 npm run build
+
+# Serve production build locally
+npm run serve
 ```
 
 ---
@@ -51,30 +51,43 @@ npm run build
 ```
 SandboxCode/
 ├── .github/
-│   └── workflows/
-│       └── node.js.yml          # CI/CD pipeline (Node.js testing)
+│   ├── workflows/
+│   │   ├── deploy.yml           # GitHub Pages deployment (Docusaurus)
+│   │   ├── node.js.yml          # Node.js CI/CD pipeline
+│   │   └── codeql.yml           # Code quality analysis
+│   └── dependabot.yml           # Dependency updates
+├── docs/
+│   ├── intro.md                 # Introduction documentation
+│   └── ...                      # Additional docs
+├── src/
+│   ├── pages/
+│   │   ├── index.js             # Homepage component
+│   │   └── dashboard.js         # Dashboard page
+│   └── css/
+│       └── custom.css           # Custom Docusaurus styles
 ├── public/
-│   ├── index.html               # Main landing page
-│   ├── style.css                # Extracted stylesheets
 │   ├── main.js                  # Frontend interactivity
-│   └── file_*.html              # Generated/converted documents
+│   └── ...                      # Static assets
+├── docusaurus.config.js         # Docusaurus configuration
+├── sidebars.js                  # Documentation sidebar structure
+├── package.json                 # Dependencies & scripts
 ├── .gitignore                   # Git ignore rules
 ├── LICENSE                      # GNU AGPL v3
-├── README.md                    # This file
-└── package.json                 # Dependencies & scripts
+└── README.md                    # This file
 ```
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Build & Deployment
 
-### Pipeline: PLAN → CODE → RUN → OBSERVE → PATCH
+This project uses a modern CI/CD pipeline for automated deployment:
 
-1. **PLAN** — Break down natural language requests into technical tasks
-2. **CODE** — Generate and edit code on a working branch
-3. **RUN** — Execute build, tests, and scripts in sandbox
-4. **OBSERVE** — Read logs and test results
-5. **PATCH** — Auto-fix issues and iterate until tests pass
+1. **Push to main** — Changes trigger GitHub Actions workflow
+2. **Build** — Node.js environment builds Docusaurus static site
+3. **Deploy** — Built artifacts deploy to GitHub Pages (gh-pages branch)
+4. **Live** — Site available at https://nguyenvanhoaithuong0507-hub.github.io/SandboxCode/
+
+**GitHub Pages Configuration**: Ensure your repository settings have GitHub Pages source set to "GitHub Actions"
 
 ---
 
@@ -86,26 +99,32 @@ SandboxCode/
 # Install dependencies
 npm install
 
-# Run tests
-npm test
+# Start local dev server (with hot reload)
+npm start
 
-# Build project
+# Build static site
 npm run build
 
-# Run with build output
-npm run build --if-present
+# Serve production build locally
+npm run serve
 
-# Clean install
-npm ci
+# Clear Docusaurus cache
+npm run clear
 ```
+
+### Docusaurus Commands
+
+- `npm run docusaurus` — Run Docusaurus CLI commands
+- `npm run swizzle` — Customize Docusaurus components
+- `npm run write-translations` — Extract translatable strings
+- `npm run write-heading-ids` — Generate heading IDs
 
 ### CI/CD Workflow
 
-The project includes a GitHub Actions workflow (`.github/workflows/node.js.yml`) that:
-- Runs on every push to `main` and PR to `main`
-- Tests across Node.js 18.x, 20.x, 22.x
-- Caches dependencies for faster builds
-- Runs `npm test` to validate changes
+The project includes GitHub Actions workflows:
+- **deploy.yml** — Builds and deploys to GitHub Pages on every push to `main`
+- **node.js.yml** — Tests build across Node.js 18.x, 20.x, 22.x
+- **codeql.yml** — Code security analysis
 
 ---
 
@@ -160,14 +179,30 @@ The project includes a GitHub Actions workflow (`.github/workflows/node.js.yml`)
 
 ---
 
-## 📱 Responsive Breakpoints
+## 🌍 Internationalization (i18n)
 
-| Breakpoint | Min Width | Use Case |
-|---|---|---|
-| Mobile | < 560px | Single column, drawer nav |
-| Tablet | 560px–899px | 2-column grids, desktop nav partial |
-| Desktop | 900px+ | 3-column grids, full desktop layout |
-| Large Desktop | 1120px+ | Contained max-width |
+This documentation supports multiple languages:
+
+- **Vietnamese (vi)** — Default language
+- **English (en)** — Secondary language
+
+Language switching is available in the site header. Add new languages in `docusaurus.config.js`:
+
+```js
+i18n: {
+  defaultLocale: 'vi',
+  locales: ['vi', 'en'],
+}
+```
+
+---
+
+## 📱 Responsive Design
+
+Docusaurus provides built-in responsive layouts:
+- **Mobile** — Single column, touch-friendly navigation
+- **Tablet** — Optimized for medium screens (640px–1024px)
+- **Desktop** — Full layout with sidebar (1024px+)
 
 ---
 
@@ -180,34 +215,62 @@ The project includes a GitHub Actions workflow (`.github/workflows/node.js.yml`)
 
 ---
 
-## 🚦 Testing
+## 📖 Documentation Content
 
-```bash
-# Run all tests
-npm test
+Documentation is stored in the `docs/` directory as Markdown files. 
 
-# Run tests in watch mode (if configured)
-npm test -- --watch
+### Creating New Pages
 
-# Generate coverage report (if configured)
-npm test -- --coverage
-```
+1. Create a `.md` file in `docs/` directory
+2. Add frontmatter metadata:
+   ```md
+   ---
+   sidebar_position: 1
+   title: Page Title
+   description: Page description for SEO
+   ---
+   ```
+3. Update `sidebars.js` to add the new page to navigation
+
+### Supported Content
+
+- Markdown with MDX support
+- Code blocks with syntax highlighting
+- Interactive components
+- Math equations (LaTeX)
+- Admonitions (notes, warnings, etc.)
 
 ---
 
-## 📚 Documentation
+## 🚀 Deployment
 
-### User Guides
-1. **CLI Setup** — Install and authenticate with GitHub
-2. **Sandbox Initialization** — Create isolated runtime environments
-3. **Task Description** — Write effective natural language prompts
-4. **PR Review** — Validate and merge auto-generated changes
+### Local Build Verification
 
-### Architecture Docs
-- **Plan Phase** — NLP parsing and task breakdown
-- **Code Generation** — Model-driven code synthesis
-- **Sandbox Runtime** — Container and execution strategy
-- **PR Creation** — Git workflow and GitHub API integration
+Before pushing, verify the build works locally:
+
+```bash
+npm run build
+```
+
+If the build fails with broken link errors, check:
+- All internal links use correct paths
+- No missing files referenced in markdown
+- All relative links are correct
+
+### GitHub Pages Setup
+
+**Manual Step (Required once)**:
+1. Go to your repository settings
+2. Navigate to **Pages** section
+3. Set **Build and deployment** source to **GitHub Actions**
+4. Save the changes
+
+After this, the `deploy.yml` workflow will automatically deploy on every push to `main`.
+
+### Viewing Deployed Site
+
+- **Production URL**: https://nguyenvanhoaithuong0507-hub.github.io/SandboxCode/
+- **Deployment Status**: Check GitHub Actions tab for workflow status
 
 ---
 
@@ -254,18 +317,34 @@ For questions or issues:
 
 ---
 
-## 🏆 Built For Developers, By AI
+## 📝 License
 
-**SandboxCodex** empowers development teams to:
-- Accelerate code reviews with intelligent analysis
-- Reduce bug-to-fix cycle time
-- Maintain code quality standards
-- Focus on architecture and features, not routine fixes
-
-**Status**: Production Ready  
-**Version**: 0.2.0  
-**Last Updated**: July 15, 2026
+This project is licensed under the **GNU AGPL v3** — see [LICENSE](./LICENSE) file for details.
 
 ---
 
-© 2026 SANDBOXCODEX. All rights reserved.
+## 🤝 Contributing
+
+Contributions are welcome! Please:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Make your changes
+4. Test locally (`npm run build`)
+5. Commit (`git commit -m 'Add feature'`)
+6. Push and open a Pull Request
+
+---
+
+## 📞 Support
+
+For issues or questions:
+- Check [GitHub Issues](https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode/issues)
+- Start a [Discussion](https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode/discussions)
+
+**Status**: Active Development  
+**Last Updated**: July 18, 2026
+
+---
+
+© 2026 SandboxCode. All rights reserved.
