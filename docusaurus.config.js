@@ -1,5 +1,5 @@
 // @ts-check
-const {themes} = require('prism-react-renderer');
+const { themes } = require('prism-react-renderer');
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 
@@ -80,9 +80,7 @@ const config = {
       links: [
         {
           title: 'Tài liệu',
-          items: [
-            { label: 'Bắt đầu', to: '/docs/intro' },
-          ],
+          items: [{ label: 'Bắt đầu', to: '/docs/intro' }],
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} SandboxCode.`,

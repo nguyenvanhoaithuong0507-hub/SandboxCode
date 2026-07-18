@@ -1,135 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connectors & Webhooks - SandboxCodex</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../pages/pages.css">
-</head>
-<body>
-  <header>
-    <div class="header-inner">
-      <div class="brand">
-        Sandbox<span class="brand-sub">Code<span class="cursor">x</span></span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connectors & Webhooks - SandboxCodex</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../pages/pages.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="brand">
+          Sandbox<span class="brand-sub">Code<span class="cursor">x</span></span>
+        </div>
+        <h2>Connectors & Webhooks</h2>
       </div>
-      <h2>Connectors & Webhooks</h2>
-    </div>
-  </header>
+    </header>
 
-  <main class="wrap">
-    <section class="section">
-      <div class="tabs-nav">
-        <button class="tab active">Webhooks</button>
-        <button class="tab">Event Subscriptions</button>
-        <button class="tab">Test Delivery</button>
-        <button class="tab">Logs</button>
-      </div>
-    </section>
+    <main class="wrap">
+      <section class="section">
+        <div class="tabs-nav">
+          <button class="tab active">Webhooks</button>
+          <button class="tab">Event Subscriptions</button>
+          <button class="tab">Test Delivery</button>
+          <button class="tab">Logs</button>
+        </div>
+      </section>
 
-    <section class="section">
-      <div class="section-head">
-        <h2>Webhooks</h2>
-        <button class="btn btn-primary">+ Add Webhook</button>
-      </div>
-      <div class="webhooks-list">
-        <div class="webhook-card">
-          <div class="webhook-header">
-            <div>
-              <h3>GitHub PR Events</h3>
-              <p class="webhook-url">https://api.example.com/webhooks/github</p>
+      <section class="section">
+        <div class="section-head">
+          <h2>Webhooks</h2>
+          <button class="btn btn-primary">+ Add Webhook</button>
+        </div>
+        <div class="webhooks-list">
+          <div class="webhook-card">
+            <div class="webhook-header">
+              <div>
+                <h3>GitHub PR Events</h3>
+                <p class="webhook-url">https://api.example.com/webhooks/github</p>
+              </div>
+              <span class="status-badge online">🟢 Active</span>
             </div>
-            <span class="status-badge online">🟢 Active</span>
-          </div>
-          <div class="webhook-info">
-            <p><strong>Events:</strong> pull_request, push</p>
-            <p><strong>Deliveries:</strong> 156 / 156 (100%)</p>
-            <p class="text-dim">Last delivery: 5 minutes ago</p>
-          </div>
-          <div class="btn-row">
-            <button class="btn btn-outline btn-sm">Edit</button>
-            <button class="btn btn-outline btn-sm">Test</button>
-            <button class="btn btn-ghost btn-sm">Logs</button>
-            <button class="btn btn-ghost btn-sm">Delete</button>
-          </div>
-        </div>
-
-        <div class="webhook-card">
-          <div class="webhook-header">
-            <div>
-              <h3>Slack Notifications</h3>
-              <p class="webhook-url">https://hooks.slack.com/services/...</p>
+            <div class="webhook-info">
+              <p><strong>Events:</strong> pull_request, push</p>
+              <p><strong>Deliveries:</strong> 156 / 156 (100%)</p>
+              <p class="text-dim">Last delivery: 5 minutes ago</p>
             </div>
-            <span class="status-badge online">🟢 Active</span>
-          </div>
-          <div class="webhook-info">
-            <p><strong>Events:</strong> job_completed, error</p>
-            <p><strong>Deliveries:</strong> 234 / 235 (99.6%)</p>
-            <p class="text-dim">Last delivery: 10 minutes ago</p>
-          </div>
-          <div class="btn-row">
-            <button class="btn btn-outline btn-sm">Edit</button>
-            <button class="btn btn-outline btn-sm">Test</button>
-            <button class="btn btn-ghost btn-sm">Logs</button>
-            <button class="btn btn-ghost btn-sm">Delete</button>
-          </div>
-        </div>
-
-        <div class="webhook-card">
-          <div class="webhook-header">
-            <div>
-              <h3>Discord Alerts</h3>
-              <p class="webhook-url">https://discordapp.com/api/webhooks/...</p>
+            <div class="btn-row">
+              <button class="btn btn-outline btn-sm">Edit</button>
+              <button class="btn btn-outline btn-sm">Test</button>
+              <button class="btn btn-ghost btn-sm">Logs</button>
+              <button class="btn btn-ghost btn-sm">Delete</button>
             </div>
-            <span class="status-badge inactive">⭕ Inactive</span>
           </div>
-          <div class="webhook-info">
-            <p><strong>Events:</strong> error, warning</p>
-            <p><strong>Status:</strong> Paused</p>
-            <p class="text-dim">No recent deliveries</p>
+
+          <div class="webhook-card">
+            <div class="webhook-header">
+              <div>
+                <h3>Slack Notifications</h3>
+                <p class="webhook-url">https://hooks.slack.com/services/...</p>
+              </div>
+              <span class="status-badge online">🟢 Active</span>
+            </div>
+            <div class="webhook-info">
+              <p><strong>Events:</strong> job_completed, error</p>
+              <p><strong>Deliveries:</strong> 234 / 235 (99.6%)</p>
+              <p class="text-dim">Last delivery: 10 minutes ago</p>
+            </div>
+            <div class="btn-row">
+              <button class="btn btn-outline btn-sm">Edit</button>
+              <button class="btn btn-outline btn-sm">Test</button>
+              <button class="btn btn-ghost btn-sm">Logs</button>
+              <button class="btn btn-ghost btn-sm">Delete</button>
+            </div>
           </div>
-          <div class="btn-row">
-            <button class="btn btn-outline btn-sm">Edit</button>
-            <button class="btn btn-primary btn-sm">Enable</button>
-            <button class="btn btn-ghost btn-sm">Delete</button>
+
+          <div class="webhook-card">
+            <div class="webhook-header">
+              <div>
+                <h3>Discord Alerts</h3>
+                <p class="webhook-url">https://discordapp.com/api/webhooks/...</p>
+              </div>
+              <span class="status-badge inactive">⭕ Inactive</span>
+            </div>
+            <div class="webhook-info">
+              <p><strong>Events:</strong> error, warning</p>
+              <p><strong>Status:</strong> Paused</p>
+              <p class="text-dim">No recent deliveries</p>
+            </div>
+            <div class="btn-row">
+              <button class="btn btn-outline btn-sm">Edit</button>
+              <button class="btn btn-primary btn-sm">Enable</button>
+              <button class="btn btn-ghost btn-sm">Delete</button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section">
-      <h2>Webhook Delivery Logs</h2>
-      <div class="delivery-logs">
-        <div class="log-entry success">
-          <div class="log-timestamp">2024-01-15 14:32:45</div>
-          <div class="log-details">
-            <p><strong>Event:</strong> pull_request.opened</p>
-            <p><strong>Webhook:</strong> GitHub PR Events</p>
-            <p><strong>Status:</strong> 200 OK (1.2s)</p>
+      <section class="section">
+        <h2>Webhook Delivery Logs</h2>
+        <div class="delivery-logs">
+          <div class="log-entry success">
+            <div class="log-timestamp">2024-01-15 14:32:45</div>
+            <div class="log-details">
+              <p><strong>Event:</strong> pull_request.opened</p>
+              <p><strong>Webhook:</strong> GitHub PR Events</p>
+              <p><strong>Status:</strong> 200 OK (1.2s)</p>
+            </div>
+            <a href="#" class="btn btn-sm btn-ghost">View</a>
           </div>
-          <a href="#" class="btn btn-sm btn-ghost">View</a>
+
+          <div class="log-entry error">
+            <div class="log-timestamp">2024-01-15 14:30:12</div>
+            <div class="log-details">
+              <p><strong>Event:</strong> job.failed</p>
+              <p><strong>Webhook:</strong> Discord Alerts</p>
+              <p><strong>Status:</strong> 500 Error - Connection timeout</p>
+            </div>
+            <div class="btn-row">
+              <button class="btn btn-sm btn-ghost">View</button>
+              <button class="btn btn-sm btn-outline">Retry</button>
+            </div>
+          </div>
         </div>
+      </section>
+    </main>
 
-        <div class="log-entry error">
-          <div class="log-timestamp">2024-01-15 14:30:12</div>
-          <div class="log-details">
-            <p><strong>Event:</strong> job.failed</p>
-            <p><strong>Webhook:</strong> Discord Alerts</p>
-            <p><strong>Status:</strong> 500 Error - Connection timeout</p>
-          </div>
-          <div class="btn-row">
-            <button class="btn btn-sm btn-ghost">View</button>
-            <button class="btn btn-sm btn-outline">Retry</button>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+    <footer class="wrap">
+      <span>© 2026 SandboxCodex. All rights reserved.</span>
+    </footer>
 
-  <footer class="wrap">
-    <span>© 2026 SandboxCodex. All rights reserved.</span>
-  </footer>
-
-  <script src="../main.js"></script>
-</body>
+    <script src="../main.js"></script>
+  </body>
 </html>

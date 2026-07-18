@@ -34,21 +34,21 @@ GCM only works with HTTP(S) remotes; you can still use Git with SSH:
 - [GitHub SSH][github-ssh]
 - [Bitbucket SSH][bitbucket-ssh]
 
-Feature|Windows|macOS|Linux\*
--|:-:|:-:|:-:
-Installer/uninstaller|&#10003;|&#10003;|&#10003;
-Secure platform credential storage [(see more)][gcm-credstores]|&#10003;|&#10003;|&#10003;
-Multi-factor authentication support for Azure DevOps|&#10003;|&#10003;|&#10003;
-Two-factor authentication support for GitHub|&#10003;|&#10003;|&#10003;
-Two-factor authentication support for Bitbucket|&#10003;|&#10003;|&#10003;
-Two-factor authentication support for GitLab|&#10003;|&#10003;|&#10003;
-Windows Integrated Authentication (NTLM/Kerberos) support|&#10003;|_N/A_|_N/A_
-Basic HTTP authentication support|&#10003;|&#10003;|&#10003;
-Proxy support|&#10003;|&#10003;|&#10003;
-`amd64` support|&#10003;|&#10003;|&#10003;
-`x86` support|&#10003;|_N/A_|&#10007;
-`arm64` support|best effort|&#10003;|&#10003;
-`armhf` support|_N/A_|_N/A_|&#10003;
+| Feature                                                         |   Windows   |  macOS   | Linux\*  |
+| --------------------------------------------------------------- | :---------: | :------: | :------: |
+| Installer/uninstaller                                           |  &#10003;   | &#10003; | &#10003; |
+| Secure platform credential storage [(see more)][gcm-credstores] |  &#10003;   | &#10003; | &#10003; |
+| Multi-factor authentication support for Azure DevOps            |  &#10003;   | &#10003; | &#10003; |
+| Two-factor authentication support for GitHub                    |  &#10003;   | &#10003; | &#10003; |
+| Two-factor authentication support for Bitbucket                 |  &#10003;   | &#10003; | &#10003; |
+| Two-factor authentication support for GitLab                    |  &#10003;   | &#10003; | &#10003; |
+| Windows Integrated Authentication (NTLM/Kerberos) support       |  &#10003;   |  _N/A_   |  _N/A_   |
+| Basic HTTP authentication support                               |  &#10003;   | &#10003; | &#10003; |
+| Proxy support                                                   |  &#10003;   | &#10003; | &#10003; |
+| `amd64` support                                                 |  &#10003;   | &#10003; | &#10003; |
+| `x86` support                                                   |  &#10003;   |  _N/A_   | &#10007; |
+| `arm64` support                                                 | best effort | &#10003; | &#10003; |
+| `armhf` support                                                 |    _N/A_    |  _N/A_   | &#10003; |
 
 (\*) GCM guarantees support only for [the Linux distributions that are officially
 supported by dotnet][dotnet-distributions].

@@ -1,0 +1,6 @@
+{
+  "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"],
+  "docs/**/*.md": ["markdownlint --fix", "prettier --write"],
+  "*.json": ["prettier --write"],
+  "*.{css,scss}": ["prettier --write"]
+}

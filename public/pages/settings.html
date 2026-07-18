@@ -1,90 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Settings - SandboxCodex</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../pages/pages.css">
-</head>
-<body class="settings-page">
-  <div class="settings-layout">
-    <aside class="settings-sidebar">
-      <h3>Settings</h3>
-      <nav class="settings-nav">
-        <button class="nav-item active" data-section="account">Account</button>
-        <button class="nav-item" data-section="profile">Profile</button>
-        <button class="nav-item" data-section="api">API Keys</button>
-        <button class="nav-item" data-section="webhooks">Webhooks</button>
-        <button class="nav-item" data-section="billing">Billing</button>
-        <button class="nav-item" data-section="advanced">Advanced</button>
-      </nav>
-    </aside>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - SandboxCodex</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../pages/pages.css" />
+  </head>
+  <body class="settings-page">
+    <div class="settings-layout">
+      <aside class="settings-sidebar">
+        <h3>Settings</h3>
+        <nav class="settings-nav">
+          <button class="nav-item active" data-section="account">Account</button>
+          <button class="nav-item" data-section="profile">Profile</button>
+          <button class="nav-item" data-section="api">API Keys</button>
+          <button class="nav-item" data-section="webhooks">Webhooks</button>
+          <button class="nav-item" data-section="billing">Billing</button>
+          <button class="nav-item" data-section="advanced">Advanced</button>
+        </nav>
+      </aside>
 
-    <main class="settings-content">
-      <section id="account" class="settings-section active">
-        <h2>Account Settings</h2>
-        <form class="settings-form">
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" value="john@example.com" disabled>
-            <p class="help-text">Your email address is verified</p>
-          </div>
-          <div class="form-group">
-            <label>Current Password</label>
-            <input type="password" placeholder="Enter current password">
-          </div>
-          <div class="form-group">
-            <label>New Password</label>
-            <input type="password" placeholder="Enter new password">
-          </div>
-          <div class="form-group">
-            <label>Confirm Password</label>
-            <input type="password" placeholder="Confirm new password">
-          </div>
-          <button type="submit" class="btn btn-primary">Update Password</button>
-        </form>
-
-        <div class="settings-section-divider"></div>
-
-        <h3>Two-Factor Authentication</h3>
-        <p>Add an extra layer of security to your account</p>
-        <button class="btn btn-outline">Enable 2FA</button>
-      </section>
-
-      <section id="api" class="settings-section">
-        <h2>API Keys</h2>
-        <p>Manage API keys for programmatic access</p>
-        <div class="api-key-list">
-          <div class="api-key-card">
-            <div class="api-key-info">
-              <p class="api-key-name">Development Key</p>
-              <p class="api-key-value">sk_test_4eC39HqLyjWDarhtT380z16p</p>
-              <p class="text-dim">Created 2 weeks ago</p>
+      <main class="settings-content">
+        <section id="account" class="settings-section active">
+          <h2>Account Settings</h2>
+          <form class="settings-form">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" value="john@example.com" disabled />
+              <p class="help-text">Your email address is verified</p>
             </div>
-            <div class="api-key-actions">
-              <button class="btn btn-ghost btn-sm">Copy</button>
-              <button class="btn btn-ghost btn-sm">Delete</button>
+            <div class="form-group">
+              <label>Current Password</label>
+              <input type="password" placeholder="Enter current password" />
+            </div>
+            <div class="form-group">
+              <label>New Password</label>
+              <input type="password" placeholder="Enter new password" />
+            </div>
+            <div class="form-group">
+              <label>Confirm Password</label>
+              <input type="password" placeholder="Confirm new password" />
+            </div>
+            <button type="submit" class="btn btn-primary">Update Password</button>
+          </form>
+
+          <div class="settings-section-divider"></div>
+
+          <h3>Two-Factor Authentication</h3>
+          <p>Add an extra layer of security to your account</p>
+          <button class="btn btn-outline">Enable 2FA</button>
+        </section>
+
+        <section id="api" class="settings-section">
+          <h2>API Keys</h2>
+          <p>Manage API keys for programmatic access</p>
+          <div class="api-key-list">
+            <div class="api-key-card">
+              <div class="api-key-info">
+                <p class="api-key-name">Development Key</p>
+                <p class="api-key-value">sk_test_4eC39HqLyjWDarhtT380z16p</p>
+                <p class="text-dim">Created 2 weeks ago</p>
+              </div>
+              <div class="api-key-actions">
+                <button class="btn btn-ghost btn-sm">Copy</button>
+                <button class="btn btn-ghost btn-sm">Delete</button>
+              </div>
             </div>
           </div>
-        </div>
-        <button class="btn btn-primary">+ Generate New Key</button>
-      </section>
+          <button class="btn btn-primary">+ Generate New Key</button>
+        </section>
 
-      <section id="billing" class="settings-section">
-        <h2>Billing</h2>
-        <div class="billing-info">
-          <p><strong>Current Plan:</strong> Pro - $29/month</p>
-          <p><strong>Billing Period:</strong> Jan 15 - Feb 15, 2026</p>
-          <p><strong>Credit Hours Used:</strong> 245 / 500 hours</p>
-        </div>
-        <button class="btn btn-outline">View Invoices</button>
-        <button class="btn btn-outline">Change Plan</button>
-      </section>
-    </main>
-  </div>
+        <section id="billing" class="settings-section">
+          <h2>Billing</h2>
+          <div class="billing-info">
+            <p><strong>Current Plan:</strong> Pro - $29/month</p>
+            <p><strong>Billing Period:</strong> Jan 15 - Feb 15, 2026</p>
+            <p><strong>Credit Hours Used:</strong> 245 / 500 hours</p>
+          </div>
+          <button class="btn btn-outline">View Invoices</button>
+          <button class="btn btn-outline">Change Plan</button>
+        </section>
+      </main>
+    </div>
 
-  <script src="../main.js"></script>
-  <script src="../pages/settings.js"></script>
-</body>
+    <script src="../main.js"></script>
+    <script src="../pages/settings.js"></script>
+  </body>
 </html>

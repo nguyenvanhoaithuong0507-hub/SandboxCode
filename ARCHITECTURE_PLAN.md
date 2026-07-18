@@ -9,6 +9,7 @@
 ## 🎯 Phân Loại Trang
 
 ### **Nhóm 1: Marketing & Public (5 trang)**
+
 Hướng đến khách hàng tiềm năng
 
 - **1. Trang Giới Thiệu** (Landing Page)
@@ -18,11 +19,13 @@ Hướng đến khách hàng tiềm năng
 - **7. Trang Cộng Đồng** (Community)
 
 ### **Nhóm 2: Authentication (1 trang)**
+
 Xác thực & quản lý người dùng
 
 - **9. Trang Đăng Nhập/Đăng Ký** (Auth - GitHub OAuth)
 
 ### **Nhóm 3: User Dashboard & Tools (6 trang)**
+
 Sử dụng sau khi đăng nhập
 
 - **8. Trang Sandbox Hub** (Main Dashboard)
@@ -33,6 +36,7 @@ Sử dụng sau khi đăng nhập
 - **13. Trang Đầu Nối** (Connectors/Webhooks)
 
 ### **Nhóm 4: Developer/Admin (1 trang)**
+
 Cấp cao - DevOps/Admin
 
 - **12. Trang MCP** (Model Context Protocol)
@@ -92,6 +96,7 @@ Cấp cao - DevOps/Admin
 ```
 
 **Chức năng:**
+
 - Responsive design (mobile-first)
 - Smooth scroll animations
 - GitHub OAuth button
@@ -127,6 +132,7 @@ Cấp cao - DevOps/Admin
 ```
 
 **Nội dung chính:**
+
 - Getting Started Guide
 - Installation Methods
 - Configuration Options
@@ -137,6 +143,7 @@ Cấp cao - DevOps/Admin
 - FAQ
 
 **Tính năng:**
+
 - Full-text search
 - Syntax highlighting
 - Copy code blocks
@@ -174,6 +181,7 @@ Cấp cao - DevOps/Admin
 ```
 
 **Loại Template:**
+
 - API Boilerplates
 - Web Apps (React, Vue, Angular)
 - Backend Services
@@ -183,6 +191,7 @@ Cấp cao - DevOps/Admin
 - CI/CD Pipelines
 
 **Mỗi Template bao gồm:**
+
 - Preview code
 - Git repository link
 - Usage guide
@@ -231,6 +240,7 @@ Cấp cao - DevOps/Admin
 ```
 
 **Integrasi hiển thị:**
+
 - VCS: GitHub, GitLab, Bitbucket
 - CI/CD: Jenkins, CircleCI, Travis
 - Communication: Slack, Discord, Teams
@@ -238,6 +248,7 @@ Cấp cao - DevOps/Admin
 - Incident: PagerDuty, Opsgenie
 
 **Mỗi Integration:**
+
 - Logo + tên
 - Mô tả
 - Connection status
@@ -292,6 +303,7 @@ Cấp cao - DevOps/Admin
 ```
 
 **Chức năng:**
+
 - Real-time chat with AI
 - Code paste & review
 - Auto-fix suggestions
@@ -301,6 +313,7 @@ Cấp cao - DevOps/Admin
 - Export reports
 
 **Capabilities:**
+
 - Code Review
 - Bug Detection
 - Performance Optimization
@@ -362,6 +375,7 @@ Cấp cao - DevOps/Admin
 ```
 
 **Danh sách Tools:**
+
 - Code Analyzer
 - Test Generator
 - Performance Profiler
@@ -414,6 +428,7 @@ Cấp cao - DevOps/Admin
 ```
 
 **Sections:**
+
 - Discussions/Q&A
 - Show & Tell (Showcases)
 - Feature Requests
@@ -422,6 +437,7 @@ Cấp cao - DevOps/Admin
 - Top Contributors
 
 **Features:**
+
 - Voting system
 - Tagging
 - Filtering
@@ -470,6 +486,7 @@ Cấp cao - DevOps/Admin
 ```
 
 **Nội dung chính:**
+
 - Quick Stats (Active jobs, Success rate, Credits)
 - Recent Projects (Grid/List)
 - Activity Log
@@ -478,6 +495,7 @@ Cấp cao - DevOps/Admin
 - Analytics Overview
 
 **Sidebar Navigation:**
+
 - Dashboard
 - Projects
 - SandboxBot
@@ -531,12 +549,14 @@ Cấp cao - DevOps/Admin
 ```
 
 **Loại Auth:**
+
 - Email/Password
 - GitHub OAuth ⭐ (Primary)
 - Google OAuth
 - 2FA optional
 
 **Trang Sign Up thêm:**
+
 - Company name
 - Role (Developer/Team Lead/DevOps)
 - Team size
@@ -584,12 +604,14 @@ Cấp cao - DevOps/Admin
 ```
 
 **Sections:**
+
 - **Account**: Profile, Email, Password, 2FA
 - **Projects**: General, Members, Integrations, Billing
 - **System**: API Keys, Webhooks, Secrets, Tokens
 - **Advanced**: Rate limits, IP whitelist, Danger zone
 
 **Chức năng:**
+
 - Update profile
 - Change password
 - Enable 2FA
@@ -656,6 +678,7 @@ Cấp cao - DevOps/Admin
 ```
 
 **Sections:**
+
 - **Status**: Health check, Uptime, Response time
 - **Instances**: List, CPU/Memory, Start/Stop
 - **Configuration**: Env vars, Docker settings
@@ -665,6 +688,7 @@ Cấp cao - DevOps/Admin
 - **Deployment**: History, Rollback, Deploy new
 
 **Chức năng:**
+
 - Real-time server monitoring
 - Auto-scaling rules
 - Performance alerts
@@ -739,6 +763,7 @@ Cấp cao - DevOps/Admin
 ```
 
 **Sections:**
+
 - **Connected Models**: List, status, usage
 - **System Prompts**: Edit, version history
 - **Context Management**: Injection settings
@@ -747,6 +772,7 @@ Cấp cao - DevOps/Admin
 - **Metrics**: Token usage, costs, performance
 
 **Chức năng:**
+
 - Connect/disconnect models
 - Edit system prompts
 - Configure context injection
@@ -844,6 +870,7 @@ Cấp cao - DevOps/Admin
 ```
 
 **Sections:**
+
 - **Webhooks**: Create, edit, delete, test
 - **Event Subscriptions**: Select events to trigger
 - **Test Webhook**: Send test payloads
@@ -852,6 +879,7 @@ Cấp cao - DevOps/Admin
 - **Rate Limiting**: Configure limits per webhook
 
 **Event Types:**
+
 - Repository: push, pull_request
 - Job: started, completed, failed
 - Sandbox: created, destroyed, timeout
@@ -862,6 +890,7 @@ Cấp cao - DevOps/Admin
 ## 🎨 Design Principles
 
 ### **Color Scheme (Dark Mode)**
+
 - Primary: `#3b82f6` (Blue)
 - Background: `#0a0b0d` (Very dark gray)
 - Cards: `#0d0f13` (Slightly lighter)
@@ -871,12 +900,14 @@ Cấp cao - DevOps/Admin
 - Text: `#e9edf1` (Off-white)
 
 ### **Typography**
+
 - Font: JetBrains Mono, SFMono
 - Headings: 14px - 28px, bold
 - Body: 12px - 15px, regular
 - Code: 11px - 12px, monospace
 
 ### **Components**
+
 - Buttons: Solid, outline, ghost variants
 - Forms: Simple with clear labels
 - Cards: Bordered with hover effects
@@ -884,6 +915,7 @@ Cấp cao - DevOps/Admin
 - Alerts: Toast notifications
 
 ### **Responsive**
+
 - Mobile: < 640px
 - Tablet: 640px - 1024px
 - Desktop: > 1024px

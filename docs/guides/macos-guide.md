@@ -50,6 +50,7 @@ alias scr='sandboxcode run'
 ```
 
 Sau đó reload:
+
 ```bash
 source ~/.zshrc
 ```

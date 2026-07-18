@@ -1,79 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SandboxBot - AI Assistant</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../pages/pages.css">
-</head>
-<body class="chatbot-page">
-  <div class="chatbot-layout">
-    <aside class="chatbot-sidebar">
-      <div class="chat-header">
-        <h2>SandboxBot</h2>
-        <button class="btn btn-ghost btn-sm">+</button>
-      </div>
-      <div class="chat-list">
-        <div class="chat-item active">
-          <p>Code Review Discussion</p>
-          <p class="text-dim">2 hours ago</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SandboxBot - AI Assistant</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../pages/pages.css" />
+  </head>
+  <body class="chatbot-page">
+    <div class="chatbot-layout">
+      <aside class="chatbot-sidebar">
+        <div class="chat-header">
+          <h2>SandboxBot</h2>
+          <button class="btn btn-ghost btn-sm">+</button>
         </div>
-        <div class="chat-item">
-          <p>Test Generation</p>
-          <p class="text-dim">1 day ago</p>
+        <div class="chat-list">
+          <div class="chat-item active">
+            <p>Code Review Discussion</p>
+            <p class="text-dim">2 hours ago</p>
+          </div>
+          <div class="chat-item">
+            <p>Test Generation</p>
+            <p class="text-dim">1 day ago</p>
+          </div>
+          <div class="chat-item">
+            <p>Performance Optimization</p>
+            <p class="text-dim">3 days ago</p>
+          </div>
         </div>
-        <div class="chat-item">
-          <p>Performance Optimization</p>
-          <p class="text-dim">3 days ago</p>
-        </div>
-      </div>
-    </aside>
+      </aside>
 
-    <main class="chatbot-content">
-      <div class="chatbot-header">
-        <h1>SandboxBot 🤖</h1>
-        <span class="status">🟢 Online</span>
-      </div>
+      <main class="chatbot-content">
+        <div class="chatbot-header">
+          <h1>SandboxBot 🤖</h1>
+          <span class="status">🟢 Online</span>
+        </div>
 
-      <div class="chat-messages">
-        <div class="message bot-message">
-          <div class="message-content">
-            <p>Hi! I'm SandboxBot, your AI coding assistant. How can I help you today?</p>
-            <div class="quick-actions">
-              <button class="btn btn-sm btn-ghost">Review Code</button>
-              <button class="btn btn-sm btn-ghost">Fix Bug</button>
-              <button class="btn btn-sm btn-ghost">Write Test</button>
-              <button class="btn btn-sm btn-ghost">Optimize</button>
+        <div class="chat-messages">
+          <div class="message bot-message">
+            <div class="message-content">
+              <p>Hi! I'm SandboxBot, your AI coding assistant. How can I help you today?</p>
+              <div class="quick-actions">
+                <button class="btn btn-sm btn-ghost">Review Code</button>
+                <button class="btn btn-sm btn-ghost">Fix Bug</button>
+                <button class="btn btn-sm btn-ghost">Write Test</button>
+                <button class="btn btn-sm btn-ghost">Optimize</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="message user-message">
+            <div class="message-content">
+              <p>Can you review this function for me?</p>
+            </div>
+          </div>
+
+          <div class="message bot-message">
+            <div class="message-content">
+              <p>Sure! Please paste the code you'd like me to review.</p>
             </div>
           </div>
         </div>
 
-        <div class="message user-message">
-          <div class="message-content">
-            <p>Can you review this function for me?</p>
-          </div>
+        <div class="chat-input-area">
+          <form class="chat-form">
+            <textarea placeholder="Type your message or paste code..." rows="3"></textarea>
+            <div class="input-actions">
+              <button type="button" class="btn btn-ghost btn-sm">📎</button>
+              <button type="submit" class="btn btn-primary btn-sm">Send</button>
+            </div>
+          </form>
         </div>
+      </main>
+    </div>
 
-        <div class="message bot-message">
-          <div class="message-content">
-            <p>Sure! Please paste the code you'd like me to review.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="chat-input-area">
-        <form class="chat-form">
-          <textarea placeholder="Type your message or paste code..." rows="3"></textarea>
-          <div class="input-actions">
-            <button type="button" class="btn btn-ghost btn-sm">📎</button>
-            <button type="submit" class="btn btn-primary btn-sm">Send</button>
-          </div>
-        </form>
-      </div>
-    </main>
-  </div>
-
-  <script src="../main.js"></script>
-</body>
+    <script src="../main.js"></script>
+  </body>
 </html>
