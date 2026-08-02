@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Base URL
 
-```
+```url
 https://api.sandboxcode.dev/v1
 ```
 

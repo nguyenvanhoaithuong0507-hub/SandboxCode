@@ -4,7 +4,8 @@ sidebar_position: 1
 
 # 📖 Tổng quan
 
-SandboxCode là một nền tảng AI-powered giúp tự động hóa quy trình phát triển phần mềm.
+SandboxCode là một nền tảng AI-powered giúp tự động hóa
+quy trình phát triển phần mềm.
 
 ## Mục đích
 

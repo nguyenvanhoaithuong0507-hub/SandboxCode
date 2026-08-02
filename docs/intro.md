@@ -4,11 +4,13 @@ sidebar_position: 1
 
 # 👋 Chào mừng đến với SandboxCode
 
-SandboxCode là một **Kỹ sư phần mềm AI** được thiết kế để giúp bạn viết, kiểm tra và triển khai mã nhanh hơn.
+SandboxCode là một **Kỹ sư phần mềm AI** được thiết kế để giúp bạn
+viết, kiểm tra và triển khai mã nhanh hơn.
 
 ## Nó hoạt động như thế nào?
 
 SandboxCode cung cấp một môi trường an toàn để:
+
 - 📝 **Viết mã** - Tạo và chỉnh sửa code trong một sandbox
 - 🧪 **Kiểm thử** - Chạy code trong một môi trường biệt lập
 - 🚀 **Triển khai** - Đẩy code lên repository của bạn

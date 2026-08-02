@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initializeNewsletterForm();
   initializeScrollAnimations();
   initializeSmoothScroll();
+  initializeCopyButtons();
 });
 
 /**
