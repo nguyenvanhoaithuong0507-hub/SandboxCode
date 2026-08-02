@@ -5,13 +5,12 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
   pull_request:
-    branches: [ "main" ]
+    branches: ['main']
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -20,11 +19,18 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm install
-    - run: npm run build
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm install
+      - name: Run ESLint
+        run: npm run lint
+      - name: Run Markdown Lint
+        run: npm run lint:md
+      - name: Check Prettier formatting
+        run: npm run format:check
+      - name: Build Docusaurus
+        run: npm run build

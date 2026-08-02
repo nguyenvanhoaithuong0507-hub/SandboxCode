@@ -10,9 +10,10 @@ A comprehensive documentation and knowledge base site built with Docusaurus 3, f
 
 - **Docusaurus 3** — Modern documentation framework with React & MDX
 - **Multilingual Support** — Vietnamese (vi) and English (en) translations
-- **Dark Mode** — Beautiful dark theme with light mode option
+- **Dark & Light Themes** — Beautiful, modern UI with smooth theme switching
 - **Fast & SEO-Optimized** — Static site generation with excellent SEO
 - **GitHub Pages Deploy** — Automated CI/CD pipeline for deployment
+- **Code Quality Validation** — ESLint, Prettier, Markdown lint with pre-commit hooks
 - **Responsive Design** — Mobile-friendly documentation experience
 
 ---
@@ -20,6 +21,7 @@ A comprehensive documentation and knowledge base site built with Docusaurus 3, f
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 18.x or higher
 - npm
 - Git
@@ -112,6 +114,25 @@ npm run serve
 npm run clear
 ```
 
+### Code Quality & Validation
+
+```bash
+# ESLint - Check JavaScript/JSX code
+npm run lint           # Check for errors
+npm run lint:fix       # Auto-fix issues
+
+# Prettier - Format code consistently
+npm run format         # Format all files
+npm run format:check   # Check formatting without changes
+
+# Markdown Lint - Check documentation
+npm run lint:md        # Check markdown files
+npm run lint:md:fix    # Fix markdown issues
+
+# Run full validation
+npm run validate       # lint + lint:md + format:check + build
+```
+
 ### Docusaurus Commands
 
 - `npm run docusaurus` — Run Docusaurus CLI commands
@@ -122,27 +143,55 @@ npm run clear
 ### CI/CD Workflow
 
 The project includes GitHub Actions workflows:
+
 - **deploy.yml** — Builds and deploys to GitHub Pages on every push to `main`
-- **node.js.yml** — Tests build across Node.js 18.x, 20.x, 22.x
+- **node.js.yml** — Validates code quality (ESLint, Prettier, Markdown lint) and builds across Node.js 18.x, 20.x, 22.x
 - **codeql.yml** — Code security analysis
+
+### Git Hooks (Pre-commit & Pre-push)
+
+Automatic validation when committing/pushing:
+
+**Pre-commit Hook:**
+
+- Runs lint-staged on changed files
+- Auto-fixes ESLint/Prettier issues
+- Blocks commit if validation fails
+
+**Pre-push Hook:**
+
+- Runs full build: `npm run build`
+- Validates no broken links (onBrokenLinks: 'throw')
+- Prevents push if build fails
+
+If hooks fail:
+
+```bash
+npm run lint:fix && npm run format  # Fix issues
+git add .                           # Re-stage files
+git commit -m "message"             # Commit again
+```
 
 ---
 
 ## 📦 Frontend Components
 
 ### HTML Structure (`public/index.html`)
+
 - Responsive dark-themed landing page
 - Semantic HTML5 sections
 - Mobile-friendly drawer navigation
 - Accessibility features (aria-labels, focus states)
 
 ### Styling (`public/style.css`)
+
 - Design system with CSS custom properties
 - Mobile-first responsive design
 - Dark theme (OLED-friendly)
 - Smooth animations and transitions
 
 ### Interactivity (`public/main.js`)
+
 - Mobile menu toggle
 - Blog tab switching
 - Newsletter form validation
@@ -154,25 +203,23 @@ The project includes GitHub Actions workflows:
 ## 🎨 Design System
 
 ### Color Palette
+
 ```css
---bg:        #0a0b0d      /* Primary background */
---bg-raise:  #0f1216      /* Elevated surfaces */
---bg-card:   #0d0f13      /* Card backgrounds */
---line:      #1e242b      /* Borders, dividers */
---blue:      #3b82f6      /* Primary accent */
---blue-brt:  #60a5fa      /* Bright accent */
---green:     #22c55e      /* Success state */
---text:      #e9edf1      /* Primary text */
---text-dim:  #8a929c      /* Secondary text */
---text-faint:#4b525b      /* Tertiary text */
+--bg: #0a0b0d /* Primary background */ --bg-raise: #0f1216 /* Elevated surfaces */
+  --bg-card: #0d0f13 /* Card backgrounds */ --line: #1e242b /* Borders, dividers */ --blue: #3b82f6
+  /* Primary accent */ --blue-brt: #60a5fa /* Bright accent */ --green: #22c55e /* Success state */
+  --text: #e9edf1 /* Primary text */ --text-dim: #8a929c /* Secondary text */ --text-faint: #4b525b
+  /* Tertiary text */;
 ```
 
 ### Typography
+
 - Font Family: JetBrains Mono, SFMono, ui-monospace, Consolas
 - Sizes: 11px–4rem (clamp responsive)
 - Line Height: 1.55 default, 1.75 for readability
 
 ### Spacing
+
 - Grid: 28px × 28px background pattern
 - Padding: 12px–56px (section-based)
 - Gap: 10px–26px (component-based)
@@ -200,6 +247,7 @@ i18n: {
 ## 📱 Responsive Design
 
 Docusaurus provides built-in responsive layouts:
+
 - **Mobile** — Single column, touch-friendly navigation
 - **Tablet** — Optimized for medium screens (640px–1024px)
 - **Desktop** — Full layout with sidebar (1024px+)
@@ -217,7 +265,7 @@ Docusaurus provides built-in responsive layouts:
 
 ## 📖 Documentation Content
 
-Documentation is stored in the `docs/` directory as Markdown files. 
+Documentation is stored in the `docs/` directory as Markdown files.
 
 ### Creating New Pages
 
@@ -253,6 +301,7 @@ npm run build
 ```
 
 If the build fails with broken link errors, check:
+
 - All internal links use correct paths
 - No missing files referenced in markdown
 - All relative links are correct
@@ -260,6 +309,7 @@ If the build fails with broken link errors, check:
 ### GitHub Pages Setup
 
 **Manual Step (Required once)**:
+
 1. Go to your repository settings
 2. Navigate to **Pages** section
 3. Set **Build and deployment** source to **GitHub Actions**
@@ -285,6 +335,7 @@ We welcome contributions! Please:
 5. Open a Pull Request
 
 ### Coding Standards
+
 - Follow existing code style
 - Write meaningful commit messages
 - Include tests for new features
@@ -294,7 +345,7 @@ We welcome contributions! Please:
 
 ## 📄 License
 
-This project is licensed under the **GNU AGPL v3** — see [LICENSE](./LICENSE) file for details.
+This project is licensed under the **GNU AGPL v3** �� see [LICENSE](./LICENSE) file for details.
 
 The AGPL v3 requires that if you modify and run this software on a network server, you must provide access to the modified source code to all users. This ensures the community benefits from improvements.
 
@@ -311,6 +362,7 @@ The AGPL v3 requires that if you modify and run this software on a network serve
 ## 📞 Support
 
 For questions or issues:
+
 1. Check existing [GitHub Issues](https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode/issues)
 2. Start a [Discussion](https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode/discussions)
 3. Review [Documentation](./README.md)
@@ -339,6 +391,7 @@ Contributions are welcome! Please:
 ## 📞 Support
 
 For issues or questions:
+
 - Check [GitHub Issues](https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode/issues)
 - Start a [Discussion](https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode/discussions)
 

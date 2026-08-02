@@ -25,10 +25,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Tham khảo',
-      items: [
-        'reference/cli-reference',
-        'reference/api-reference',
-      ],
+      items: ['reference/cli-reference', 'reference/api-reference'],
     },
   ],
 };

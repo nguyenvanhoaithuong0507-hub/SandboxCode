@@ -1,137 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Server Management - SandboxCodex</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../pages/pages.css">
-</head>
-<body>
-  <header>
-    <div class="header-inner">
-      <div class="brand">
-        Sandbox<span class="brand-sub">Code<span class="cursor">x</span></span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Server Management - SandboxCodex</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../pages/pages.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="brand">
+          Sandbox<span class="brand-sub">Code<span class="cursor">x</span></span>
+        </div>
+        <h2>SandboxCode Server</h2>
       </div>
-      <h2>SandboxCode Server</h2>
-    </div>
-  </header>
+    </header>
 
-  <main class="wrap">
-    <section class="section">
-      <div class="status-panel">
-        <div class="status-item">
-          <span class="status-indicator online">🟢</span>
-          <div>
-            <p class="label">Production</p>
-            <p class="value">ONLINE</p>
+    <main class="wrap">
+      <section class="section">
+        <div class="status-panel">
+          <div class="status-item">
+            <span class="status-indicator online">🟢</span>
+            <div>
+              <p class="label">Production</p>
+              <p class="value">ONLINE</p>
+            </div>
+          </div>
+          <div class="status-item">
+            <p class="label">Uptime</p>
+            <p class="value">99.98%</p>
+          </div>
+          <div class="status-item">
+            <p class="label">Response Time</p>
+            <p class="value">145ms</p>
+          </div>
+          <div class="status-item">
+            <p class="label">CPU Usage</p>
+            <p class="value">32%</p>
+          </div>
+          <div class="status-item">
+            <p class="label">Memory</p>
+            <p class="value">58%</p>
           </div>
         </div>
-        <div class="status-item">
-          <p class="label">Uptime</p>
-          <p class="value">99.98%</p>
-        </div>
-        <div class="status-item">
-          <p class="label">Response Time</p>
-          <p class="value">145ms</p>
-        </div>
-        <div class="status-item">
-          <p class="label">CPU Usage</p>
-          <p class="value">32%</p>
-        </div>
-        <div class="status-item">
-          <p class="label">Memory</p>
-          <p class="value">58%</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section">
-      <h2>Quick Actions</h2>
-      <div class="btn-row">
-        <button class="btn btn-outline">Restart</button>
-        <button class="btn btn-outline">Scale</button>
-        <button class="btn btn-outline">View Logs</button>
-        <button class="btn btn-outline">Monitor</button>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="tabs-nav">
-        <button class="tab active">Overview</button>
-        <button class="tab">Instances</button>
-        <button class="tab">Configuration</button>
-        <button class="tab">Logs</button>
-        <button class="tab">Monitoring</button>
-        <button class="tab">Backups</button>
-      </div>
-    </section>
-
-    <section class="section">
-      <h3>Performance Metrics</h3>
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <p class="metric-label">Active Instances</p>
-          <p class="metric-value">4</p>
+      <section class="section">
+        <h2>Quick Actions</h2>
+        <div class="btn-row">
+          <button class="btn btn-outline">Restart</button>
+          <button class="btn btn-outline">Scale</button>
+          <button class="btn btn-outline">View Logs</button>
+          <button class="btn btn-outline">Monitor</button>
         </div>
-        <div class="metric-card">
-          <p class="metric-label">Deployments (24h)</p>
-          <p class="metric-value">23</p>
-        </div>
-        <div class="metric-card">
-          <p class="metric-label">Sandboxes Running</p>
-          <p class="metric-value">156</p>
-        </div>
-        <div class="metric-card">
-          <p class="metric-label">Total Executions</p>
-          <p class="metric-value">12.5K</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section">
-      <h3>Instances</h3>
-      <table class="instances-table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Status</th>
-            <th>CPU</th>
-            <th>Memory</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>prod-1</td>
-            <td><span class="status-badge online">🟢 Online</span></td>
-            <td>18%</td>
-            <td>45%</td>
-            <td><a href="#" class="btn btn-sm btn-ghost">View Logs</a></td>
-          </tr>
-          <tr>
-            <td>prod-2</td>
-            <td><span class="status-badge online">🟢 Online</span></td>
-            <td>24%</td>
-            <td>52%</td>
-            <td><a href="#" class="btn btn-sm btn-ghost">View Logs</a></td>
-          </tr>
-          <tr>
-            <td>test-1</td>
-            <td><span class="status-badge warning">🟡 Idle</span></td>
-            <td>8%</td>
-            <td>18%</td>
-            <td><a href="#" class="btn btn-sm btn-ghost">View Logs</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
+      <section class="section">
+        <div class="tabs-nav">
+          <button class="tab active">Overview</button>
+          <button class="tab">Instances</button>
+          <button class="tab">Configuration</button>
+          <button class="tab">Logs</button>
+          <button class="tab">Monitoring</button>
+          <button class="tab">Backups</button>
+        </div>
+      </section>
 
-  <footer class="wrap">
-    <span>© 2026 SandboxCodex. All rights reserved.</span>
-  </footer>
+      <section class="section">
+        <h3>Performance Metrics</h3>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <p class="metric-label">Active Instances</p>
+            <p class="metric-value">4</p>
+          </div>
+          <div class="metric-card">
+            <p class="metric-label">Deployments (24h)</p>
+            <p class="metric-value">23</p>
+          </div>
+          <div class="metric-card">
+            <p class="metric-label">Sandboxes Running</p>
+            <p class="metric-value">156</p>
+          </div>
+          <div class="metric-card">
+            <p class="metric-label">Total Executions</p>
+            <p class="metric-value">12.5K</p>
+          </div>
+        </div>
+      </section>
 
-  <script src="../main.js"></script>
-</body>
+      <section class="section">
+        <h3>Instances</h3>
+        <table class="instances-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Status</th>
+              <th>CPU</th>
+              <th>Memory</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>prod-1</td>
+              <td><span class="status-badge online">🟢 Online</span></td>
+              <td>18%</td>
+              <td>45%</td>
+              <td><a href="#" class="btn btn-sm btn-ghost">View Logs</a></td>
+            </tr>
+            <tr>
+              <td>prod-2</td>
+              <td><span class="status-badge online">🟢 Online</span></td>
+              <td>24%</td>
+              <td>52%</td>
+              <td><a href="#" class="btn btn-sm btn-ghost">View Logs</a></td>
+            </tr>
+            <tr>
+              <td>test-1</td>
+              <td><span class="status-badge warning">🟡 Idle</span></td>
+              <td>8%</td>
+              <td>18%</td>
+              <td><a href="#" class="btn btn-sm btn-ghost">View Logs</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="wrap">
+      <span>© 2026 SandboxCodex. All rights reserved.</span>
+    </footer>
+
+    <script src="../main.js"></script>
+  </body>
 </html>
