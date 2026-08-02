@@ -1,0 +1,17 @@
+node_modules
+build
+.docusaurus
+dist
+coverage
+.git
+.next
+out
+.github
+CHANGELOG.md
+LICENSE
+package.json
+package-lock.json
+ARCHITECTURE_PLAN.md
+CONTRIBUTING.md
+README_DOCS.md
+public/

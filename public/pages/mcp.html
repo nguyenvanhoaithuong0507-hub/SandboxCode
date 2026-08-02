@@ -1,131 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Model Context Protocol - SandboxCodex</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../pages/pages.css">
-</head>
-<body>
-  <header>
-    <div class="header-inner">
-      <div class="brand">
-        Sandbox<span class="brand-sub">Code<span class="cursor">x</span></span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Model Context Protocol - SandboxCodex</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../pages/pages.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="brand">
+          Sandbox<span class="brand-sub">Code<span class="cursor">x</span></span>
+        </div>
+        <h2>Model Context Protocol</h2>
       </div>
-      <h2>Model Context Protocol</h2>
-    </div>
-  </header>
+    </header>
 
-  <main class="wrap">
-    <section class="section">
-      <p class="subtitle">Connected to 8 AI Models</p>
-    </section>
+    <main class="wrap">
+      <section class="section">
+        <p class="subtitle">Connected to 8 AI Models</p>
+      </section>
 
-    <section class="section">
-      <div class="tabs-nav">
-        <button class="tab active">Models</button>
-        <button class="tab">System Prompts</button>
-        <button class="tab">Context</button>
-        <button class="tab">Metrics</button>
-      </div>
-    </section>
+      <section class="section">
+        <div class="tabs-nav">
+          <button class="tab active">Models</button>
+          <button class="tab">System Prompts</button>
+          <button class="tab">Context</button>
+          <button class="tab">Metrics</button>
+        </div>
+      </section>
 
-    <section class="section">
-      <h2>Connected Models</h2>
-      <div class="models-list">
-        <div class="model-card">
-          <div class="model-header">
-            <h3>GPT-4</h3>
-            <span class="status-badge online">🟢 Active</span>
+      <section class="section">
+        <h2>Connected Models</h2>
+        <div class="models-list">
+          <div class="model-card">
+            <div class="model-header">
+              <h3>GPT-4</h3>
+              <span class="status-badge online">🟢 Active</span>
+            </div>
+            <div class="model-stats">
+              <p><strong>Requests:</strong> 1,234/day</p>
+              <p><strong>Avg Tokens:</strong> 2,890</p>
+              <p><strong>Cost:</strong> $12.34/day</p>
+            </div>
+            <div class="btn-row">
+              <button class="btn btn-outline btn-sm">Settings</button>
+              <button class="btn btn-ghost btn-sm">Disconnect</button>
+            </div>
           </div>
-          <div class="model-stats">
-            <p><strong>Requests:</strong> 1,234/day</p>
-            <p><strong>Avg Tokens:</strong> 2,890</p>
-            <p><strong>Cost:</strong> $12.34/day</p>
+
+          <div class="model-card">
+            <div class="model-header">
+              <h3>Claude 3 Opus</h3>
+              <span class="status-badge online">🟢 Active</span>
+            </div>
+            <div class="model-stats">
+              <p><strong>Requests:</strong> 456/day</p>
+              <p><strong>Avg Tokens:</strong> 4,120</p>
+              <p><strong>Cost:</strong> $8.90/day</p>
+            </div>
+            <div class="btn-row">
+              <button class="btn btn-outline btn-sm">Settings</button>
+              <button class="btn btn-ghost btn-sm">Disconnect</button>
+            </div>
+          </div>
+
+          <div class="model-card">
+            <div class="model-header">
+              <h3>Gemini Pro</h3>
+              <span class="status-badge online">🟢 Active</span>
+            </div>
+            <div class="model-stats">
+              <p><strong>Requests:</strong> 789/day</p>
+              <p><strong>Avg Tokens:</strong> 3,450</p>
+              <p><strong>Cost:</strong> $6.75/day</p>
+            </div>
+            <div class="btn-row">
+              <button class="btn btn-outline btn-sm">Settings</button>
+              <button class="btn btn-ghost btn-sm">Disconnect</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>System Prompts</h2>
+        <div class="prompt-card">
+          <div class="prompt-header">
+            <p><strong>Active Prompt:</strong> Code Reviewer v2.3</p>
+            <p class="text-dim">Updated 2 hours ago</p>
           </div>
           <div class="btn-row">
-            <button class="btn btn-outline btn-sm">Settings</button>
-            <button class="btn btn-ghost btn-sm">Disconnect</button>
+            <button class="btn btn-outline btn-sm">Edit</button>
+            <button class="btn btn-outline btn-sm">View History</button>
+            <button class="btn btn-ghost btn-sm">Reset</button>
           </div>
         </div>
+      </section>
 
-        <div class="model-card">
-          <div class="model-header">
-            <h3>Claude 3 Opus</h3>
-            <span class="status-badge online">🟢 Active</span>
+      <section class="section">
+        <h2>Usage Metrics</h2>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <p class="metric-label">Tokens Used (Today)</p>
+            <p class="metric-value">45K / 100K</p>
           </div>
-          <div class="model-stats">
-            <p><strong>Requests:</strong> 456/day</p>
-            <p><strong>Avg Tokens:</strong> 4,120</p>
-            <p><strong>Cost:</strong> $8.90/day</p>
+          <div class="metric-card">
+            <p class="metric-label">Cost (Today)</p>
+            <p class="metric-value">$2.15</p>
           </div>
-          <div class="btn-row">
-            <button class="btn btn-outline btn-sm">Settings</button>
-            <button class="btn btn-ghost btn-sm">Disconnect</button>
+          <div class="metric-card">
+            <p class="metric-label">Requests</p>
+            <p class="metric-value">234</p>
+          </div>
+          <div class="metric-card">
+            <p class="metric-label">Avg Response</p>
+            <p class="metric-value">1.2s</p>
           </div>
         </div>
+      </section>
+    </main>
 
-        <div class="model-card">
-          <div class="model-header">
-            <h3>Gemini Pro</h3>
-            <span class="status-badge online">🟢 Active</span>
-          </div>
-          <div class="model-stats">
-            <p><strong>Requests:</strong> 789/day</p>
-            <p><strong>Avg Tokens:</strong> 3,450</p>
-            <p><strong>Cost:</strong> $6.75/day</p>
-          </div>
-          <div class="btn-row">
-            <button class="btn btn-outline btn-sm">Settings</button>
-            <button class="btn btn-ghost btn-sm">Disconnect</button>
-          </div>
-        </div>
-      </div>
-    </section>
+    <footer class="wrap">
+      <span>© 2026 SandboxCodex. All rights reserved.</span>
+    </footer>
 
-    <section class="section">
-      <h2>System Prompts</h2>
-      <div class="prompt-card">
-        <div class="prompt-header">
-          <p><strong>Active Prompt:</strong> Code Reviewer v2.3</p>
-          <p class="text-dim">Updated 2 hours ago</p>
-        </div>
-        <div class="btn-row">
-          <button class="btn btn-outline btn-sm">Edit</button>
-          <button class="btn btn-outline btn-sm">View History</button>
-          <button class="btn btn-ghost btn-sm">Reset</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Usage Metrics</h2>
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <p class="metric-label">Tokens Used (Today)</p>
-          <p class="metric-value">45K / 100K</p>
-        </div>
-        <div class="metric-card">
-          <p class="metric-label">Cost (Today)</p>
-          <p class="metric-value">$2.15</p>
-        </div>
-        <div class="metric-card">
-          <p class="metric-label">Requests</p>
-          <p class="metric-value">234</p>
-        </div>
-        <div class="metric-card">
-          <p class="metric-label">Avg Response</p>
-          <p class="metric-value">1.2s</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="wrap">
-    <span>© 2026 SandboxCodex. All rights reserved.</span>
-  </footer>
-
-  <script src="../main.js"></script>
-</body>
+    <script src="../main.js"></script>
+  </body>
 </html>

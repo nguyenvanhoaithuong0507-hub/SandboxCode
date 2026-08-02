@@ -70,20 +70,20 @@ jobs:
 .PHONY: install setup test build deploy clean
 
 install:
-	npm install
+ npm install
 
 setup:
-	sandboxcode config set git-user-email "your@email.com"
+ sandboxcode config set git-user-email "your@email.com"
 
 test:
-	sandboxcode run "npm test"
+ sandboxcode run "npm test"
 
 build:
-	sandboxcode run "npm run build"
+ sandboxcode run "npm run build"
 
 deploy: build test
-	sandboxcode task create "Deploy to production"
+ sandboxcode task create "Deploy to production"
 
 clean:
-	rm -rf node_modules dist
+ rm -rf node_modules dist
 ```

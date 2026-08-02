@@ -1,0 +1,152 @@
+# Clonage d’un dépôt
+
+Lorsque vous créez un référentiel sur GitHub, il existe en tant que référentiel distant. Vous pouvez cloner votre dépôt pour créer une copie locale sur votre ordinateur et effectuer une synchronisation entre les deux emplacements.
+
+## À propos du clonage d’un référentiel
+
+<div class="ghd-tool webui">
+
+Vous pouvez cloner un référentiel à partir de GitHub.com votre ordinateur local ou vers un espace de code pour
+faciliter la résolution des conflits de fusion, ajouter ou supprimer des fichiers et envoyer des validations plus volumineuses. Lorsque vous clonez un référentiel, vous copiez le référentiel à partir de GitHub.com votre ordinateur local ou vers une machine virtuelle distante lorsque vous créez un espace de code. Pour plus d’informations sur le clonage vers un espace de code, consultez [Création d’un codespace pour un dépôt](/fr/codespaces/developing-in-a-codespace/creating-a-codespace-for-a-repository).
+
+</div>
+
+<div class="ghd-tool cli">
+
+Vous pouvez cloner un référentiel à partir de GitHub.com sur votre ordinateur local pour faciliter la résolution des conflits de fusion, ajouter ou supprimer des fichiers et envoyer (push) des validations plus volumineuses. Lorsque vous clonez un référentiel, vous copiez le référentiel à partir de GitHub.com sur votre ordinateur local.
+
+</div>
+
+<div class="ghd-tool desktop">
+
+Vous pouvez cloner un référentiel à partir de GitHub.com sur votre ordinateur local pour faciliter la résolution des conflits de fusion, ajouter ou supprimer des fichiers et envoyer (push) des validations plus volumineuses. Lorsque vous clonez un référentiel, vous copiez le référentiel à partir de GitHub.com sur votre ordinateur local.
+
+</div>
+
+Le clonage d’un référentiel extrait une copie complète de toutes les données de référentiel qui GitHub.com ont à ce stade dans le temps, y compris toutes les versions de chaque fichier et dossier pour le projet. Vous pouvez envoyer (push) vos modifications au référentiel distant sur GitHub.com, ou extraire les modifications d’autres personnes à partir de GitHub.com. Pour plus d’informations, consultez « [Utilisation de Git](/fr/get-started/using-git) ».
+
+Vous pouvez cloner votre référentiel existant ou cloner le référentiel existant d’une autre personne pour contribuer à un projet.
+
+## Clonage d’un dépôt
+
+<div class="ghd-tool webui">
+
+1. Sur GitHub, accédez à la page principale du référentiel.
+
+2. Au-dessus de la liste de fichiers, cliquez sur **<svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-code" aria-label="code" role="img"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"></path></svg> Code**.
+
+   ![Capture d’écran de la liste des fichiers dans la page d’accueil d’un dépôt. Le bouton « Code » est mis en évidence avec un encadré orange foncé.](/assets/images/help/repository/code-button.png)
+
+3. Copiez l’URL du dépôt.
+
+   * Pour cloner le référentiel en utilisant HTTPS, sous « HTTPS », cliquez sur <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-copy" aria-label="Copier dans le presse-papiers" role="img"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path></svg>.
+   * Pour cloner le dépôt avec une clé SSH, en incluant un certificat émis par l’autorité de certification SSH de votre organisation, cliquez sur **SSH** et sur <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-copy" aria-label="Copy to clipboard" role="img"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path></svg>.
+   * Pour cloner un dépôt avec l’GitHub CLI, cliquez sur **GitHub CLI** et sur <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-copy" aria-label="Copy to clipboard" role="img"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path></svg>.
+
+     ![Capture d’écran du menu déroulant « Code ». À droite de l’URL HTTPS du dépôt, une icône de copie est indiquée en orange foncé.](/assets/images/help/repository/https-url-clone-cli.png)
+
+4. Ouvrez <span class="platform-mac">Terminal</span><span class="platform-linux">Terminal</span><span class="platform-windows">Git Bash</span>.
+
+5. Remplacez le répertoire de travail actuel par l’emplacement où vous voulez mettre le répertoire cloné.
+
+6. Tapez `git clone`, puis collez l’URL que vous avez copiée précédemment.
+
+   ```shell
+   git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+   ```
+
+7. Appuyez sur **Entrée** pour créer votre clone local.
+
+   ```shell
+   $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+   > Cloning into `Spoon-Knife`...
+   > remote: Counting objects: 10, done.
+   > remote: Compressing objects: 100% (8/8), done.
+   > remove: Total 10 (delta 1), reused 10 (delta 1)
+   > Unpacking objects: 100% (10/10), done.
+   ```
+
+</div>
+
+<div class="ghd-tool cli">
+
+> \[!NOTE]
+> Pour plus d’informations sur GitHub CLI, consultez [À propos de l’interface CLI GitHub](/fr/github-cli/github-cli/about-github-cli).
+
+Pour cloner un référentiel localement, utilisez la sous-commande `repo clone`. Remplacez le paramètre `repository` par le nom du référentiel. Par exemple, `octo-org/octo-repo`, `monalisa/octo-repo` ou `octo-repo`. Si la partie `OWNER/` de l’argument du référentiel `OWNER/REPO` est omise, il prend par défaut le nom de l’utilisateur à l’origine de l’authentification.
+
+```shell
+gh repo clone REPOSITORY
+```
+
+Vous pouvez également utiliser l’URL GitHub pour cloner un référentiel.
+
+```shell
+gh repo clone https://github.com/PATH-TO/REPOSITORY
+```
+
+</div>
+
+<div class="ghd-tool desktop">
+
+1. Sur GitHub, accédez à la page principale du référentiel.
+2. Au-dessus de la liste des fichiers, cliquez sur **<svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-code" aria-label="code" role="img"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"></path></svg> Code**.
+
+   ![Capture d’écran de la liste des fichiers dans la page d’accueil d’un dépôt. Le bouton « Code » est mis en évidence avec un encadré orange foncé.](/assets/images/help/repository/code-button.png)
+3. Pour cloner et ouvrir le référentiel avec GitHub Desktop, cliquez sur **<svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-desktop-download" aria-label="desktop-download" role="img"><path d="m4.927 5.427 2.896 2.896a.25.25 0 0 0 .354 0l2.896-2.896A.25.25 0 0 0 10.896 5H8.75V.75a.75.75 0 1 0-1.5 0V5H5.104a.25.25 0 0 0-.177.427Z"></path><path d="M1.573 2.573a.25.25 0 0 0-.073.177v7.5a.25.25 0 0 0 .25.25h12.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25h-3a.75.75 0 1 1 0-1.5h3A1.75 1.75 0 0 1 16 2.75v7.5A1.75 1.75 0 0 1 14.25 12h-3.727c.099 1.041.52 1.872 1.292 2.757A.75.75 0 0 1 11.25 16h-6.5a.75.75 0 0 1-.565-1.243c.772-.885 1.192-1.716 1.292-2.757H1.75A1.75 1.75 0 0 1 0 10.25v-7.5A1.75 1.75 0 0 1 1.75 1h3a.75.75 0 0 1 0 1.5h-3a.25.25 0 0 0-.177.073ZM6.982 12a5.72 5.72 0 0 1-.765 2.5h3.566a5.72 5.72 0 0 1-.765-2.5H6.982Z"></path></svg> Ouvrir avec GitHub Desktop**.
+
+   ![Capture d’écran de la liste déroulante « Code » d’un dépôt. Un bouton intitulé « Ouvrir avec GitHub Desktop » est présenté en orange foncé.](/assets/images/help/repository/open-with-desktop.png)
+4. Suivez les instructions dans GitHub Desktop pour finaliser le clonage.
+
+Pour plus d’informations, consultez « [Clonage d’un dépôt de GitHub vers GitHub Desktop](/fr/desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop) ».
+
+</div>
+
+## Clonage d’un référentiel vide
+
+Un référentiel vide ne contient aucun fichier. C’est souvent le cas si vous n’initialisez pas le référentiel avec un fichier README lors de sa création.
+
+1. Sur GitHub, accédez à la page principale du référentiel.
+
+2. Pour cloner votre référentiel à l’aide de la ligne de commande à l’aide du protocole HTTPS, sous « Installation rapide », cliquez sur <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-copy" aria-label="Copy to clipboard" role="img"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path></svg>. Pour cloner le référentiel à l’aide d’une clé SSH, y compris un certificat émis par l’autorité de certification SSH de votre organisation, cliquez sur **SSH**, puis cliquez sur <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-copy" aria-label="Copy to clipboard" role="img"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path></svg>.
+
+   ![Capture d'écran des notes d'installation rapide pour un référentiel vide. À droite de l’URL HTTPS du dépôt, une icône de copie est indiquée en orange foncé.](/assets/images/help/repository/empty-https-url-clone-button.png)
+
+   Sinon, pour cloner votre dépôt dans Desktop, cliquez sur **<svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-desktop-download" aria-label="desktop-download" role="img"><path d="m4.927 5.427 2.896 2.896a.25.25 0 0 0 .354 0l2.896-2.896A.25.25 0 0 0 10.896 5H8.75V.75a.75.75 0 1 0-1.5 0V5H5.104a.25.25 0 0 0-.177.427Z"></path><path d="M1.573 2.573a.25.25 0 0 0-.073.177v7.5a.25.25 0 0 0 .25.25h12.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25h-3a.75.75 0 1 1 0-1.5h3A1.75 1.75 0 0 1 16 2.75v7.5A1.75 1.75 0 0 1 14.25 12h-3.727c.099 1.041.52 1.872 1.292 2.757A.75.75 0 0 1 11.25 16h-6.5a.75.75 0 0 1-.565-1.243c.772-.885 1.192-1.716 1.292-2.757H1.75A1.75 1.75 0 0 1 0 10.25v-7.5A1.75 1.75 0 0 1 1.75 1h3a.75.75 0 0 1 0 1.5h-3a.25.25 0 0 0-.177.073ZM6.982 12a5.72 5.72 0 0 1-.765 2.5h3.566a5.72 5.72 0 0 1-.765-2.5H6.982Z"></path></svg> Configurer dans Desktop** et suivez les instructions pour terminer le clonage.
+
+   ![Capture d'écran des notes d'installation rapide pour un référentiel vide. Le bouton « Configurer sur le bureau » est encadré en orange foncé.](/assets/images/help/repository/empty-desktop-clone-button.png)
+
+3. Ouvrez <span class="platform-mac">Terminal</span><span class="platform-linux">Terminal</span><span class="platform-windows">Git Bash</span>.
+
+4. Remplacez le répertoire de travail actuel par l’emplacement où vous voulez mettre le répertoire cloné.
+
+5. Tapez `git clone`, puis collez l’URL que vous avez copiée précédemment.
+
+   ```shell
+   git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+   ```
+
+6. Appuyez sur **Entrée** pour créer votre clone local.
+
+   ```shell
+   $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+   > Cloning into `Spoon-Knife`...
+   > remote: Counting objects: 10, done.
+   > remote: Compressing objects: 100% (8/8), done.
+   > remove: Total 10 (delta 1), reused 10 (delta 1)
+   > Unpacking objects: 100% (10/10), done.
+   ```
+
+## Résolution des erreurs de clonage
+
+Lors du clonage d’un référentiel, il est possible que vous rencontriez des erreurs.
+
+Si vous ne parvenez pas à cloner un référentiel, vérifiez ce qui suit :
+
+* Vous pouvez vous connecter à l’aide de HTTPS. Pour plus d’informations, consultez « [Résolution des erreurs de clonage](/fr/repositories/creating-and-managing-repositories/troubleshooting-cloning-errors) ».
+* Vous êtes autorisé à accéder au référentiel que vous souhaitez cloner. Pour plus d’informations, consultez « [Résolution des erreurs de clonage](/fr/repositories/creating-and-managing-repositories/troubleshooting-cloning-errors#check-your-permissions) ».
+* La branche par défaut que vous souhaitez cloner existe toujours. Pour plus d’informations, consultez « [Résolution des erreurs de clonage](/fr/repositories/creating-and-managing-repositories/troubleshooting-cloning-errors#error-remote-head-refers-to-nonexistent-ref-unable-to-checkout) ».
+
+## Pour aller plus loin
+
+* [Résolution des problèmes liés à la connectivité](/fr/get-started/using-github/troubleshooting-connectivity-problems)
